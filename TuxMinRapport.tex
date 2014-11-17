@@ -11,7 +11,7 @@
 \usepackage{subcaption}
 \usepackage{titlepic}
 \usepackage{a4wide}
-%\usepackage{lettrine}
+\usepackage{lettrine}
 \usepackage[htt]{hyphenat}
 \usepackage{enumitem}
 \usepackage{color}
@@ -56,23 +56,23 @@ literate=%
   \renewcommand{\footrulewidth}{0pt}
 }
 
-%Her kommer opsett av info for pdf filen
-%\pdfinfo{%
-%  /Title    (Rapport prosjektoppgave i programutvikling)
-%  /Author   ()
-%  /Creator  ()
-%  /Producer ()
-%  /Subject  ()
-%  /Keywords ()
-%}
+%Her kommer opsett av info for pdf filen 
+\pdfinfo{%
+ /Title    (Rapport prosjektoppgave i programutvikling)
+ /Author   ()
+ /Creator  ()
+ /Producer ()
+ /Subject  ()
+ /Keywords ()
+}
 
 
 
 \begin{document}
 \input{./tex/fremside/fremside.tex}
 \maketitle
-%\input{./tex/sammendrag/sammendrag.tex}
-%\input{./tex/om_programmet/om_programmet.tex}
+% Her kommer sammendrag som skal være det som kommer først etter fremsiden.  
+\input{./tex/sammendrag/sammendrag.tex}
 \tableofcontents
 \lstlistoflistings
 \listoffigures
@@ -83,8 +83,6 @@ literate=%
 \input{./tex/introduksjon/introduksjon.tex}
 \input{./tex/prosessdokumentasjon/prosessdokumentasjon.tex}
 \input{./tex/produktdokumentasjon/produktdokumentasjon.tex}
-\input{./tex/brukerveiledning/brukerveiledning.tex}
-\input{./tex/testrapport/testrapport.tex}
 
 
 
