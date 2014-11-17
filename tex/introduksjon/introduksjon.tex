@@ -1,6 +1,66 @@
 \chapter{Introduksjon}
-\input{./tex/introduksjon/om_rapporten.tex}
-\input{./tex/introduksjon/beskrivelse.tex}
-\input{./tex/introduksjon/tolkning.tex}
-\input{./tex/introduksjon/mal.tex}
-\input{./tex/introduksjon/teknisk.tex}
+
+\section{Om rapporten}
+Denne rapporten består av flere kapitler som kan leses hver for seg og som har hvert sine formål.
+
+
+\begin{description}
+
+\item[Introduksjonen] vil gå gjennom litt av forutsetningene for oppgaven, målene vi har satt oss, tolkningen av oppgaven og valgene vi har tatt på bakgrunn av det. 
+
+\item[Prosessdokumentasjonen] vil beskrive aspektet ved arbeidet vårt. Hvordan vi kom sammen som en gruppe, bestemte oss for fremgangsmåte og utfordringene vi har stått overfor underveis.
+
+\item[Produktdokumentasjonen] er av det veldig tekniske slaget. Det er gitt mange illustrasjoner og kodeeksempler på utvalgte metoder og funksjonalitet, slik at det skal være overkommelig for utenforstående å sette seg inn i programmet.
+
+\item[Testrapporten] vil beskrive de tester vi har utført, hvordan vi har utført dem og hvilke resultater de gav. 
+
+\item[Brukerdokumentasjonen] vil både være inkludert i dette dokumentet, samt som et frittstående dokument. Den dokumentasjonen vil gi brukeren oversikt over hvordan en bruker programmet og hvilke muligheter programmet gir.
+
+\end{description}
+
+\section{Formål}
+Formål med rapporten og oppgaven. 
+
+\section{Tolkning av oppgaven}
+
+\section{Mål}
+Følgende mål ble satt opp ved begynnelsen av arbeidet med oppgaven:
+\begin{description}
+\item[Skalering]
+
+\item[MVC]
+Programmet skal være bygget opp etter MVC\footnote{eng. Model View Controller}-arkitektur slik at logikk og brukergrensesnitt er helt avskjermet fra hverandre og all informasjonsutveksling blir håndtert via en kontroller. Det skal være så mye gjenbruk av kode som mulig. De metoder og variabler som kan være \texttt{static} skal være det.
+\item[Intuitivt brukergrensesnitt]
+Brukergrensesnittet skal være enkelt og oversiktlig slik at en bruker som ikke er kjent med programmet kan foreta boligsøk og sende forespørsel til meglerfirmaet. En ny megler skal rask starte opp i sin modul og på kort tid kunne bli kjent med programmets funksjonalitet.
+\item[Faglig utfordring]
+Det var et mål at vi strakk oss langt i forhold til å komme opp med løsninger som ikke bare løser oppgaven i henhold til pensum, men på en måte som er mest mulig slik vi tror at man ville gjort det i næringslivet. Det vil si å ikke ta snarveier, velge \texttt{JTable} foran \texttt{JList}, bruke \texttt{MVC}, osv.
+\end{description}
+
+\section{Tekniske detaljer}
+
+\subsection{Utviklingsmiljø} \label{subssec:utvmiljo}
+Prosjektet er utviklet i Eclipse IDE\footnote{eng. Integrated Development
+Environment}. Ikoner og annen grafikk er opprettet eller editert i Gimp\footnote{The GNU Image Manipulation Program}.
+Det er brukt en bootstrap FlatUI \emph{her skal vi legge til link til flat ui
+og beskrive denne kort.} Generelle ikoner (Open source) er hentet fra
+\href{http://www.flaticons.net}{flaticons.net}. Innledende struktur over klasser ble opprettet som UML diagram med ArgoUML.
+Hele prosjektet er lagd i tegnoppsett UTF-8 og det er ikke brukt noen norske bokstaver i kode eller kommentarer.
+
+\subsection{Krav til programvare}
+Eventuell beskrivelse om hvilken webserver som programvaren må kjøre på eller
+hvilken software som denne er testet på.
+
+\subsection{Versjonshåndtering}
+Til versjonhåndtering brukte vi GIT via terminal og innebygd støtte i utviklingmiljøer (IDE). Lagring av prosjektet ble gjennomført sentralt via en repository på github. Repository for gruppen er privat frem til innlevering av prosjektoppgaven og kommer til å gjøres tilgjengelig for publikum etter at deadline for prosjektet har utløpt. Kildekoden og prosjektets historikk vil da være tilgjengelig fra følgende linker:
+
+\begin{description}
+\item[Kildekode]
+\hfill \\
+\url{https://github.com/CervecerosCodigo/EasyDev}
+\\Lagret som JavaScript prosjekt.
+
+\item[Rapport]
+\hfill \\
+\url{https://github.com/CervecerosCodigo/EasyDevRapport}
+\\ \LaTeX{} kode
+\end{description}
