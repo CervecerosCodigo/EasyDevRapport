@@ -1,6 +1,6 @@
 \documentclass[a4paper,11pt]{report}
 
-
+%TexLive pakker
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -18,8 +18,10 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage[section]{placeins}
-\usepackage{xcolor} % Required for specifying custom colors
-\usepackage{fix-cm} % Allows increasing the font size of specific fonts beyond LaTeX default specifications
+% xcolor og fix-cm brukes til fremsiden
+\usepackage{xcolor} 
+\usepackage{fix-cm}
+ 
 \lstdefinestyle{java1}{
   language=Java,
   basicstyle={\ttfamily\footnotesize},
@@ -61,14 +63,14 @@ literate=%
 }
 
 %Her kommer opsett av info for pdf filen 
-\pdfinfo{%
- /Title    (Rapport prosjektoppgave i programutvikling)
- /Author   ()
- /Creator  ()
- /Producer ()
- /Subject  ()
- /Keywords ()
-}
+% \pdfinfo{%
+%  /Title    (Rapport prosjektoppgave i programutvikling)
+%  /Author   ()
+%  /Creator  ()
+%  /Producer ()
+%  /Subject  ()
+%  /Keywords ()
+% }
 
 
 
