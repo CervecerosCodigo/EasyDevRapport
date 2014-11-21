@@ -8,59 +8,49 @@ Denne rapporten består av flere kapitler som kan leses hver for seg og som har 
 
 \item[Introduksjonen] vil gå gjennom litt av forutsetningene for oppgaven, målene vi har satt oss, tolkningen av oppgaven og valgene vi har tatt på bakgrunn av det. 
 
-\item[Prosessdokumentasjonen] vil beskrive aspektet ved arbeidet vårt. Hvordan vi kom sammen som en gruppe, bestemte oss for fremgangsmåte og utfordringene vi har stått overfor underveis.
+\item[Ha er EasyDev?] en introduksjon til produktet. gir kort beskrivelse av målgruppe og hvordan det er tenkt at produktet skal brukes.
 
-\item[Produktdokumentasjonen] er av det veldig tekniske slaget. Det er gitt mange illustrasjoner og kodeeksempler på utvalgte metoder og funksjonalitet, slik at det skal være overkommelig for utenforstående å sette seg inn i programmet.
+\item[Prosessdokumentasjon] her beskriver vi hvordan vi har gått til veis under utviling av våre prototyper. Hvilke beslutt vi har tatt og hvorfor vi har tenkt som vi har gjort.
 
-\item[Testrapporten] vil beskrive de tester vi har utført, hvordan vi har utført dem og hvilke resultater de gav. 
+\item[Brukertesting] vi har brukertestet vår hi-fi prototype på noen tenkbare brukere og gir en kort oppsumering av resultatene her.
 
-\item[Brukerdokumentasjonen] vil både være inkludert i dette dokumentet, samt som et frittstående dokument. Den dokumentasjonen vil gi brukeren oversikt over hvordan en bruker programmet og hvilke muligheter programmet gir.
+\item[Evaluering] her se vir med et kritisk øye på arbeidet vårt. Vi diskuterer selve produktet, begrensninger og hva kunde vi ha gjort annerledes hvis...
 
 \end{description}
 
 \section{Formål}
-Formål med rapporten og oppgaven. 
+Formål med oppgaven er å ta frem en idé og materisere den i en prototype som kan vise ekesmpel på hvordan slik teknologi kan i fremtiden gjøre livet bedre og enklere for mensker med spesielle behov. 
 
 \section{Tolkning av oppgaven}
+Oppgaven skulle egentlig besvare følgende spørsmål: 
+\begin{quote}
+Et	blikk	inn	i	framtida:	Hvordan	kan	vi	om	10-20	år	bruke	teknologi	
+– både	dagens	og	tenkt	framtidig	– til	å	gjøre	livet	bedre	for	
+mennesker	som	har	spesielle behov.
+\end{quote}
+
+Vi tolkede oppgave litt anerldes. Som studenter i adre årskurs på høgskolen vet vel og godt hvordan det er å begynne på utdanningen og blir direkte kastet inn i en verden av teksbaserte konfigurasjonfiler. Vi ville derfro lage noe som ikke finnes fra før men kan hjelpe studenter med å starte opp de viktige delene i utdanningen sin insteden for å bruke tid på å sette opp et fungerende utviklingsssytem. 
 
 \section{Mål}
-Følgende mål ble satt opp ved begynnelsen av arbeidet med oppgaven:
+Følgende mål ble satt opp for å gjøre det enkelt å avgrense oppgaven:
 \begin{description}
-\item[Skalering]
-Hvorfor det er bra med skalering?
-\item[MVC]
-Beskrivelse om en annen målpunkt.
-\item[Intuitivt brukergrensesnitt]
-Brukergrensesnittet skal være enkelt og oversiktlig slik at en bruker som ikke er kjent med programmet kan foreta boligsøk og sende forespørsel til meglerfirmaet. En ny megler skal rask starte opp i sin modul og på kort tid kunne bli kjent med programmets funksjonalitet.
-\item[Faglig utfordring]
-Det var et mål at vi strakk oss langt i forhold til å komme opp med løsninger som ikke bare løser oppgaven i henhold til pensum, men på en måte som er mest mulig slik vi tror at man ville gjort det i næringslivet. Det vil si å ikke ta snarveier, velge \texttt{JTable} foran \texttt{JList}, bruke \texttt{MVC}, osv.
+\item[Teknologi] definer vhilken tekngologi som vi ønsker at vår produkt skal basere seg på.
+\item[Målgruppe] er det noen målgruppe som vi spesifikt ønsker å jobbe mot.
+\item[Fremtid] Er løsningen fremtidsorienter. Finns en andre produkter som gir samme funksjonalitet som kan ta over i fremtiden?
+\item[Faglig utfordring] Strekker vi oss lagt nok? Dersom vi ønsker å faktisk lage et produkt som idéen vår skal arbeidet også bidra til at vi blir flinkere utvilkere under reisen.
+
 \end{description}
 
-\section{Tekniske detaljer}
-
-\subsection{Utviklingsmiljø} \label{subssec:utvmiljo}
-Prosjektet er utviklet i Eclipse IDE\footnote{eng. Integrated Development
-Environment}. Ikoner og annen grafikk er opprettet eller editert i Gimp\footnote{The GNU Image Manipulation Program}.
-Det er brukt en bootstrap FlatUI \emph{her skal vi legge til link til flat ui
-og beskrive denne kort.} Generelle ikoner (Open source) er hentet fra
-\href{http://www.flaticons.net}{flaticons.net}. Innledende struktur over klasser ble opprettet som UML diagram med ArgoUML.
-Hele prosjektet er lagd i tegnoppsett UTF-8 og det er ikke brukt noen norske bokstaver i kode eller kommentarer.
-
-\subsection{Krav til programvare}
-Eventuell beskrivelse om hvilken webserver som programvaren må kjøre på eller
-hvilken software som denne er testet på.
-
-\subsection{Versjonshåndtering}
-Til versjonhåndtering brukte vi GIT via terminal og innebygd støtte i utviklingmiljøer (IDE). Lagring av prosjektet ble gjennomført sentralt via en repository på github. Repository for gruppen er privat frem til innlevering av prosjektoppgaven og kommer til å gjøres tilgjengelig for publikum etter at deadline for prosjektet har utløpt. Kildekoden og prosjektets historikk vil da være tilgjengelig fra følgende linker:
-
+\section{Avgrensninger}
 \begin{description}
-\item[Kildekode]
-\hfill \\
-\url{https://github.com/CervecerosCodigo/EasyDev}
-\\Lagret som JavaScript prosjekt.
-
-\item[Rapport]
-\hfill \\
-\url{https://github.com/CervecerosCodigo/EasyDevRapport}
-\\ \LaTeX{} kode
+\item[Hva oppgave ikke skal gjøre]
+Oppgaven skal ikke resultere i et ferdi produkt. Dette er ikke mål med kurset og vi har ikke tilgjengelig tid for å ta frem både akritektur og kode for en fungerende produkt og løsning.
+\item[Hva oppgaven skal levere]
+Oppgaven skal resultere i en low-fi og en hi-fi prototype for å visualisere hvordan vi som gruppe har tenkt at vårt produkt skal fungere. Prototypen skal gi en <<\textit{technology preview}>> over noen funksjoner som er tenkt at skal implementeres.
 \end{description}
+
+\section{Hjelpemidler og verktøy}
+Til samarbeid i gruppen var brukt Google Drive og GitHub for utveksling av kildekode. Mockups til første protoype ble oprettet via \href{https://balsamiq.com/}{balsamiq mockups} plugin til Google Drive. \textit{Pecha Kucha} presentasjon er opprettet med \href{https://prezi.com/z_1ipfrf4m_3/skolelinux-pa-ny-mate/}{prezi}. Viktisgste UI elemter til hi-prototypen er lagd med \href{http://getbootstrap.com/}{bootstrap} og utformet med hjelp av med \href{http://designmodo.github.io/Flat-UI/}{FlatUI}. Til utvikling av kildekode bruktes Eclipse IDE med JavaScript, Web, og PHP eclipse miljø. Hi-fi prototype krever en webserver med PHP støtte. for utvikling og testing bruktes Apache web server. Kildekode er tilgjengelig på prosjektets git repository
+\href{https://github.com/CervecerosCodigo/EasyDev}{https://github.com/CervecerosCodigo/EasyDev}.
+Rapporten er skrevet som \LaTeX{} kode og er tilgjengelig via en separat git repository \\ \href{https://github.com/CervecerosCodigo/EasyDevRapport}{https://github.com/CervecerosCodigo/EasyDevRapport}
+
