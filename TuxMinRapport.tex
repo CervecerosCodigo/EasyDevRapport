@@ -21,6 +21,8 @@
 % xcolor og fix-cm brukes til fremsiden
 \usepackage{xcolor} 
 \usepackage{fix-cm}
+\usepackage{hyperref}
+%\usepackage{url}
 
  
 \lstdefinestyle{java1}{
@@ -94,5 +96,9 @@ literate=%
 \input{./tex/evaluering/evaluering.tex}
 
 %Appendix for vedlegg og andre ting som ikke direkte passer inn i resten av rapporten
+
+\bibliographystyle{plain}
+\bibliography{bibliografi}
 \input{./tex/appendix/appendix.tex}
+
 \end{document}
