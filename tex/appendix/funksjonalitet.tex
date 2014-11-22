@@ -1,0 +1,96 @@
+\chapter{Funksjonalitet} \label{app:funksjonalitet}
+Følgende tillegg beskriver i detalj noen av modulene som er tenkt at systemet skal inneholde ved første release.
+
+
+\section{Tjenere (servers)}
+Følgende modul skal brukes til å sette opp forskjellige servere på maskinene. Modulene kjøres som skript og setter ønsket funksjonalitet etter ønske. Under oppsettet av hver enkel tjener blir brukeren presentert med en “wizard” der man får lov til å velge ekstra funksjonalitet eller annen funksjon som eventuelt tilbys av programvaren (f.eks. virtuelle servere i Apache). Oppsett av tjenere er fullstendig modulbasert. Dette medfører at brukere kan etter ønske utvikle egne konfigurasjonsmoduler som kan publiseres og deles med andre studenter via systemets marketplace. 
+
+\subsection{Apache webserver}
+Modulen setter opp og konfigurerer apache webserver med tilhørende moduler. Brukeren blir presentert med en wizard som går igjennom følgende innstillinger og konfigurasjoner.
+\begin{description}
+
+\item[Mapper] Her kan brukeren sette opp hvilke mapper som skal være tilgjengelige på nett. Brukeren har mulighet til å sette opp flere mapper i sin hjemmemappe samt se en forhåndsvisning på hvordan nettadressen kommer til å se ut. Dersom brukeren har satt opp synkroniseringstjeneste (mer om dette under ...) blir det også mulig for brukeren å “peke” webserveradresse til en mappe i synkroniseringstjenesten. Dette vil da gjøre det mulig for brukeren til å oppdatere nettsiden fra en ekstern datamaskin som synkroniserer til samme tjeneste.
+
+\item[Tilgang og sikkerhet] Her er det mulig å sette opp funksjoner som “directory browsing” og diverse sikkerhets innstillinger.
+
+\item[Moduler] Aktivering av tilleggsmoduler som php og MySQL støtte. Valg av feks disse to vil laste ned og installere php samt MySQL database med standardinnstillinger.
+\end{description}
+
+\subsection{MySQL}
+Modulen installerer, og setter opp bruker med samme brukernavn og passord som systemets  bruker. Etter ønske blir det også vist en “wizard” som viser brukeren hvordan man kan koble opp mot databasen og bruke denne. Etter ønske fra brukeren kan det også bli satt opp med software for enklere administrasjon av databasen, f.esk. MySQL Workbench. Det skal også gis mulighet til å konfigurere tabeller som brukes i fag som Databaser (se her etterkommende avsnitt om hobbyhuset). 
+
+\subsection{SSH}
+Alle *NIX baserte system kan kontrolleres via “secure shell”. Denne modulen vil sette opp en standard ssh-server på maskinen som gjør det mulig for brukeren å logge seg på fra en ssh klient.
+
+\section{System}
+Modulen system innholder moduler som brukes til systemkonfigurasjon og kontroll. Modulene her kan brukes til installere og konfigurere både programvare og medfølgende innstillinger på brukerens sin virtuelle maskin. 
+
+\subsection{Programvare}
+Her kan brukeren velge å installere moduler som er tilgjengelige via et sentralt repository for EasyDev. Brukeren kan velge å laste ned og installere nye moduler (programvare) eller slette en eksisterende modul.
+
+\subsection{Oppstart}
+Modulen gir brukeren mulighet til å velge hvilke prosesser som skal startes sammen med systemet. For eksempel dersom man ønsker at sammen med systemet skal startes Apache webserver og MySQL database. Dette velges utfra en liste med sjekkbokser som generes basert på de moduler som er installert på systemet.
+
+\subsection{Brannmur}
+Dersom man ønsker at systemet skal ha en brannmur blir det mulig for brukeren å sette opp slik funksjonalitet via brannmurmodulen. Brukeren kan med hjelp av denne modul implementere en brannmur som må ta høyde for de moduler som allerede kjører på systemet. Dette må gjøres for at brannuren ikke skal sperre eventuelle porter for inngående kommunikasjon som de ulike modulene bruker. Derfor skal det finnes en intern fil (eller database) som innholder all nødvendig informasjon om porter som skal holdes åpne dersom brannmuren blir konfigurert i etterkant. Oppsett av brannmuren skal foregå med hjelp av en “wizard” og konfigurasjons-gui der brukeren kan kontrollere de innstillinger som blir foreslått basert hvilken port som skal holdes åpen. Alle kommandoer som kjøres fra GUI skal også presenteres for brukeren i en nærliggende utskriftsvindu og i tillegg lagres i en loggfil. Hensikten med dette er at man skal ha mulighet til å studere den “manuelle” konfigurasjonen for egen læring.
+
+\subsection{Brukere og grupper}
+Her definerer man brukere og grupper og hvilke brukere som er med i hvilke grupper.
+Denne modulen er tenkt brukt sammen med “Ressursene”, det vil si webområdene man har definert og databasene man har opprettet osv. 
+Man kan her opprette brukere og legge dem i grupper. Gruppene kan da brukes som prosjektgrupper, og man får opp en liste med ressurser på maskinen der man kan huke av hvilke ressurser gruppen skal ha tilgang til. De brukerne som er medlemmer i gruppen vil da få redigeringsmulighet på de delte ressursene og mulighet til å laste opp og endre innhold.
+Dette er en sentral funksjonalitet i forhold til å gi studentene en god plattform å jobbe med i prosjektoppgaver, og så langt vi har oversikt over er det en unik funksjonalitet som ikke tilbys i andre løsninger, hverken på HIOA eller i administrasjonsløsninger for Linux.
+
+\subsection{Synkronisering}
+Modulen skal gi mulighet for brukeren til å sette opp synkronisering til de mest vanlige skytjenestene som Dropbox, SkyDrive, Google Drive men også eventuelt hjelpe til å sette opp MyCloud dersom noen ønsker å benytte seg av en egen synkroniseringsløsning. 
+Det skal være mulig å dele mapper innad i en gruppe. Tanken er at brukere kan direkte skrive inn gruppemedlemmenes studentnummer for å sende forespørsel til en synkronisert mappe. Denne funksjonen er mest sannsynlig kun mulig dersom man kjører en synkroniseringssky internt på skolens sine servere. 
+
+\subsection{Systemoversikt}
+Her skal det bli presentert forskjellige typer av systeminformasjon, som informasjon om aktuell OS kjerne, antall brukere, installerte moduler og tilgjengelig lagringsplass på samtlige partisjoner. 
+
+\subsection{Logg}
+En modul som tydelig viser all loggføring som foregår i “/var/log”. Det skal være enkelt for brukeren å identifisere hvilket program loggen kommer fra. Et eksempel er loggen fra Apache som er plassert i “/var/log/httpd.log”. Dette er selvsagt ingen brukervennlig måte å identifisere en loggfil. Brukeren skal ha mulighet til å velge at man ønsker å se loggfilen for Apache server, og man får så opp filens innhold og hvor filen er lagret på systemet. Det skal også være mulig å lese gamle loggfiler som har blitt komprimert av loggrotasjonsystemet. Det vil også være mulighet for å søke i loggfilene.
+
+\subsection{Belastning}
+Skal være en form av “widgets” og/eller statistikk som presenteres for brukeren om systemets “helse” og tilstand. Her skal det være mulig å lese av CPU belastnintg, tilgjengelig hukommelse, aktuelle operasjoner på platelager og prosessenes belastning. Man skal også få opp nettverksinformasjon og belastningen på de forskjellige enhetene.
+
+
+
+\section{Ressurser}
+Modulen består av forskjellige ressurser som kan være til god nytte i forskjellige fag. Det kan være alt fra gode linker til nettsider, til forskjellige verktøy som validering av kode. Innholdet her blir mest sannsynlig manuelt lagt til av studentene, avhengig av hvilket fag som er interessant for dem. Målet er også at modulene eventuelt kan utvikles av studentene selv slik at disse blir godt tilpasset til de fag som gis ved skolen. Det skal være mulig å rangere alle modulene etter for eksempel antall stemmer eller popularitet (antall nedlastninger).
+
+\subsection{Validering}
+I de fleste fag som har med webutvikling å gjøre er det krav at man skal validere oppgavene  man har laget slik at løsningen følger alle nødvendige standarder. Det er tenkt at under ressurskategorien skal det finnes tilgjengelig en modul som tillater å velge godkjente filtyper og kjøre online validering på disse. Dette vil da gjøre det enklere å raskt validere filene uten å  gjøre dem tilgjengelig/publisere på en webbserver eller laste dem opp til en tredjeparts side for validering.
+
+\subsection{Nettressurser}
+Mulighet for en rask tilgang til gode kunskaps resurser på nettett sortert etter fag. Dette kan for ekesempel være W3Shools, Udemy, Cave of Programming med mer.
+
+\subsection{Regex-generator}
+Det finner mange regex-generatorer tilgjengelige på nettet. Problemet med disse er at selve syntaksen for hvordan regexen skal valideres på de forskjellige sidene varierer. Med andre ord det tar tid å lære seg den enktlte regex validator som finnes på nettet, og som ofte krever disse at brukeren kan noe standard regex syntaks fra før. Det som skal tilbys via vårt system er at brukeren skal få mulighet til å bygge sin egen regex ut fra et enkelt grafisk grensesnitt som er en form av “logiske gater” eller “Venn” diagram der man skal angi hvilke typer av ASCII eller uttrykk som skal inkluderes eller ekskluderes for den aktuelle regex-streng. Ut over dette skal det også være mulig for brukeren å skrive inn sin egen regex og direkte teste denne den på ønskede strenger for å se om den fungerer. Eventuelt kan det implementeres en link til ressurser som viser hvordan regex kan implementeres i forskjellige språk og teknologier. Alt fra tolkningsrpåk som PHP, JavaScript til kompileringsspråk og de mest vanlige grafiske bibliotek som Swing, JavaFX, GTK+ eller Qt.
+
+\subsection{SQL scripts}
+Her kan det plasseres SQL-script som for eksempel “hobbyhuset” som kan brukes i faget Databaser. Andre script som backup av databaser, samt andre administrative script vil også finnes her.
+
+\subsection{Versjonshåndtering}
+Det er normalt ganske vanskelig å komme igang med et versjonskontrollsystem. En modul som ikke bare setter opp en av de mest populære versjonhånderingssystemene (f.eks. GIT) men også viser de mest vanlige prinsippene som er nødvendig for å starte med å jobbe i team der man bruker versjonshåndtering. Det kan være elementer som oppsett, staging, commits, branching, merging, diff samt push og pull til fjernservere. 
+
+
+
+\section{Meldinger}
+En integrasjon av studentepost direkte til systemet. Det skal tilsvare mer eller mindre samme funksjonalitet som i en webmail. 
+
+
+
+\section{Verktøy}
+Modulen skal bestå av praktiske verktøy som kan være til god hjelp dersom man trenger å gjøre endringer i konfigurasjon direkte på den virtuelle maskinen. Foreløpig tenker vi på de to verktøy som er til grunn og bunn viktigst for alle brukere: teksteditor og terminal.
+
+\subsection{Editorer}
+Integrert teksteditor som kan brukes til de fleste utviklingsspråk, med syntakshighlighting og syntakskontroll. En slik editor mest aktuell for språk som brukes i webutvikling ettersom det blir mulig å utvikle direkte på webserveren uten å koble til/montere mappen eller laste opp filene kontinuerlig til serveren. Editoren skal også gi mulighet til å kompilere kode. Dersom man bruker skriptspråk som html eller css skal det være mulig å validere syntaksen direkte fra editoren. Eventuelt skal det også implementeres støtte for versjonshåndtering. Eksempel på språk og script som skal støttes: Java, JavaScript, PHP, Html, SQL, CSS, C, bash.
+
+\subsection{Terminal}
+For å gjøre det enkelt å administrere systemet for mer erfarne brukere skal det også tilbys en modul som representerer en terminalemulator. Foreløpig er det noe uklart hvordan en slik terminal skal implementeres i en nettleser ettersom det er ønskelig å gir umiddelbar tilbakemelding til bruker som utskrift av resultat fra de kommandoer som kjøres i terminalen. Målet er å gi like god bruksopplevelse som man får ved bruk av terminal direkte på maskinen. 
+
+\subsection{Filbehandler}
+En enklere variant av en filbehandler som tillater bruker til å behandle filer på systemet sitt. Programmet skal følge samme rettigheter som man har på systemet slik at vanlige brukerrettigheter får brukeren kun behandle filer i sin egen hjemmemappe. Dersom man ønsker “root”-tilgang må man logge seg på med “root”-passord, dette vil gi en tilbakemelding til brukeren i form av at f.esk. programmet skifter farge til rød (skal signalisere fare ettersom med “root” tilgang er det fullt mulig å ødelegge systemet). 
+
+
+Med tanke på læring er det viktig at brukeren kan se terminalutskrift for alle kommandoer som blir foretatt for filbehandlingsoperasjoner. Med andre ord, programmet skal oversette det som brukeren ønsker å gjøre grafisk i programmet til “bash” kommandoer. Eksempel på dette er hvis man ønsker å skifte navn på filA.txt til filB.txt vil brukeren bli presentert samtidig som operasjonen utføres med en utskrift ved siden som viser selve syntaksen for operasjonen. I dette tilfellet : \texttt{bash\$ mv filA.txt filB.txt}. Dette vil gi veldig god forståelse og eksempler på bruk av terminal i unix/linux/mac-miljøer.
