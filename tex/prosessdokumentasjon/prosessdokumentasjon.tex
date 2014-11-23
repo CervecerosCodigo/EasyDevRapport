@@ -36,11 +36,101 @@ Dessa skulle plaseres på en velkomstside som innholdr også annen viktig inform
 \section{Low-fi prototype}
 Det er ganske vanlig at man til en low-fi prototype bruker papp eller papir fo rå visualisere hvordan man kan bruke en GUI. Vi valgte å benytte oss av \href{http://balsamiq.com/products/mockups/}{balsamiq mockups} hvilket gav oss mulighet å ikke bare visualisere hvordan brukergrensesnittet skulle se ut men også legge inn enkel funksjonalitet. Slik funksjonalitet bestod av at man fikk mulighet til å klikke seg videre til neste skjermbilda fra menyer. Dette gav en ganske grei opplevelse over hvordan det kommer til å føles da man bruker produktet.
 
-\begin{figure}
+
+Dersom vi tar en rask overblikk over framsiden i figur \ref{fig:lowfi_fremside} ser vi at hver enkel modul er gruppert etter gestalt prinsippen for proksimitet og elementer.\cite{forelesning:tulpesh}
+
+
+\begin{figure}[ht]
 %bruk \begin{figure}[ht] dersom figuren ikke skal flyte
+\centering
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./img/prosessdokumentasjon/lowfi/fremside.png}
 \caption[Low-fi prototype]{Fremside for EasyDev i første low-fi prototype.}
 \label{fig:lowfi_fremside}
+\end{figure}
+
+
+% med flagg p setter vi hele denne figuren på en egen side
+\begin{figure}[p]
+        \centering
+        \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]
+                {./img/prosessdokumentasjon/lowfi/apache1.png}
+                \caption{Fremside -> Sett opp webserver}
+                \label{fig:apache1}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]
+                {./img/prosessdokumentasjon/lowfi/apache2.png}
+                \caption{Valg av mapper}
+                \label{fig:apache2}
+        \end{subfigure}
+       
+        \vspace{0.6cm}
+        \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]
+                {./img/prosessdokumentasjon/lowfi/apache3.png}
+                \caption{Activere innhold i mapper}
+                \label{fig:apache3}
+        \end{subfigure}
+        \hspace{0.05cm}
+        \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]
+                {./img/prosessdokumentasjon/lowfi/apache4.png}
+                \caption{Valg av moduler}
+                \label{fig:apache4}
+        \end{subfigure}
+        
+        \vspace{0.6cm}
+        \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]
+                {./img/prosessdokumentasjon/lowfi/apache5.png}
+                \caption{Avanserte Apache moduler}
+                \label{fig:apache5}
+        \end{subfigure}
+        
+        \vspace{0.6cm}
+        \caption[Konfigurasjon av Apache webserver]{Eksempel på konfigurasjon av Apache webserver.}\label{fig:lowfiapache}
+\end{figure}
+
+
+
+% med flagg p setter vi hele denne figuren på en egen side
+\begin{figure}[p]
+        \centering
+        \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]
+                {./img/prosessdokumentasjon/lowfi/b1.png}
+                \caption{Fremside -> Sett opp webserver}
+                \label{fig:brukere1}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]
+                {./img/prosessdokumentasjon/lowfi/b2.png}
+                \caption{Valg av mapper}
+                \label{fig:brukere2}
+        \end{subfigure}
+       
+        \vspace{0.6cm}
+        \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]
+                {./img/prosessdokumentasjon/lowfi/b3.png}
+                \caption{Activere innhold i mapper}
+                \label{fig:brukere3}
+        \end{subfigure}
+        \hspace{0.02cm}
+        \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]
+                {./img/prosessdokumentasjon/lowfi/b4.png}
+                \caption{Valg av moduler}
+                \label{fig:brukere4}
+        \end{subfigure}
+        
+        \vspace{0.6cm}
+        \caption[Konfigurasjon av Apache webserver]{Eksempel på konfigurasjon av Apache webserver.}\label{fig:lowfibrukere}
 \end{figure}
 
 \section{Hi-fi prototype}
