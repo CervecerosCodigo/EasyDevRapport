@@ -7,7 +7,7 @@ Test for sitering av kilder.\cite{forelesning:tulpesh}\cite{book:utforming}\cite
 
 
 
-\section{Første utkast}
+\section{Første utkast} \label{sec:utkast}
 \marginpar{Viktige prinsipper:
 feedback, constraints (bruker får ikke gjøre feil), affordances
 }
@@ -167,8 +167,40 @@ Dersom vi ønsker kan vi gå videre til neste skjermbilde å legge til nye resur
 
 \section{Hi-fi prototype}
 
-\section{Kriterier og avgjøresler}
-Fokuser på alle valg som ble tatt. Hvilke kriterier og 
-prinsipper i faget ligger bak avgjørelsene? 
 
-Her kan vi skrive om hvorfor vi har akkuratt valgt Linux. Hvorfor skal løsningen være webbasert og hvorfor skal den kjøres i en virtuell maskin? Og så andre kriterier og avgjøresel som vi har tatt under veien. 
+\section{Kriterier og avgjøresler}
+Følgende avsnitt beskriver hvilke og hvorfor vi har tatt de valg som vi har gjort under reisen. Vi skal fokusere på valg kriterier og valg fra et MMI perspektiv men det er også viktig å opplyse av andre kriterier som mer teknisk karaktær.
+
+\subsection{Virtuell maskin}
+System skal kjøre i en vituell maskin ettersom det er enekelt å både opprette slette eller gjenoprette slik løsning. Da en ny bruker skal starte en maskin trenger denne kun bli kopiert fra en avbildning og satt opp med riktig brukernavn og passord. Dersom brukeren ødelegger noe i maskinen blir det muligå eksportere konfigurasjonsfiler for valgte moduler og oprette en ny maskin med sammen med eksisterende konfigurasjonfiler f.eks. Apache.
+
+\subsection{Webbasert}
+Ettersom grensesnittet er webbasert blir dt tilgjengelig fra hvilken datamaskin som helst uavhengig operativsystem eller nettleser. Systemet vil få en god skalering da  det blir enkelt å sette inn eller fjerne moduler. Det vil også være relativ liten terskel for studenter å utvikle egene moduler dersom man sysnes at noen moduler mangler i systemet. 
+
+\subsection{Bruk av visuelle elementer}
+Som tidligere beskrevet i avsnitt \ref{sec:utkast} og \ref{sec:lowfi} har vi valgt å strikt benytte oss av gestalt prinsipper ved plassering av alle visuelle kompoenter. Hensikten er at når brukeren for første gang besøker fremsiden til systemet skal man kunne bruke denne fulstendig intuitivt og uten å behøve tenkte på hvordan forskejllige kontroller er plasert. 
+
+Et godt eksempel på dette er plasering av alle knapper på fremsiden. Disse har vi valgt å legge horisantalt med samme avstand fra hverandre. Slik plassering danner tilhørighet, man veit at disse henger sammen (\textit{proximity, element connectedness, similarity}). I tilleg forsterkes dette gjennom at vi bruker samme farger på alle de komponentene.\cite{forelesning:tulpesh}
+Samme prinsipper gjelder også for de undermenyer som åpnes dersom man klikker på noen av de konmponentene. Man blir presentert med en liste av muligheter gruppert etter tilhørighet til sin funksjon. 
+
+Toppanelen er symetrik distribuert for å danne en følelse balanse og sentral perspektig i layouten. Vi har plasert EasyDev logo i midten og på begge sider av den to komponenter som er kalender og klokke til venstre samt brukerikone og hurtivalg til instilligenr til høyre om logoen. Dette danne en tydelig fordelig og utnyttelse av overflate som ikke kan grupperes sammen etter funksjonstilhørighet med hovedkomponentene på siden.
+
+Nederste rad har vi i prototypen valgt å bruke til elementer som har med status av systemet å gjøre. For tilfeldet er det tenkt at man direkte etter pålogging kan får en oversikt over cpu og ram bruk, samt tilgjengelig lagringsutrymme og kjørende prosesser. Dette er noe som kan være ønskeverdt å se for noen av brukerne med det er foreløpig usikkert dersom slike funksjoner skal være aktivert for standardbrukere. Det finnes også forslag at utrymmet kan reserveres til andre foremål som brukeren kan selv velge hvilke typer av <<widgets>> som kan benyttes. Dette er tillegsfunksjonalitet som kan bli i stor grad forendret fra utviklig av prototype til alfa versjon.
+
+\subsection{Bruk av farger}
+
+\begin{figure}[h]
+\begin{tabularx}{\textwidth}{*6{>{\centering\arraybackslash}X}@{}}
+
+\cellcolor{Turquoise} \emph{Turquoise} & \cellcolor{Emerald} \textit{Emerald} & \cellcolor{PeterRiver} \emph{Peter River} & \cellcolor{Amethyst} \emph{Amethyst} & \cellcolor{WetAsphalt} \emph{Wet Asphalt} \\[5ex] 
+
+\cellcolor{GreenSea} \emph{Green Sea} & \cellcolor{Nephritis} \textit{Nephritis} & \cellcolor{BelizeHole} \emph{Belize Hole} & \cellcolor{Wisteria} \emph{Wisteria} & \cellcolor{MidnightBlue} \emph{Midnight Blue} \\[5ex] 
+
+\cellcolor{SunFlower} \emph{Sun Flower} & \cellcolor{Carrot} \textit{Carrot} & \cellcolor{Alizarin} \emph{Alizarin} & \cellcolor{Clouds} \emph{Clouds} & \cellcolor{Concrete} \emph{Concrete} \\[5ex] 
+ 
+\cellcolor{Orange} \emph{Orange} & \cellcolor{Pumpkin} \textit{Pumpkin} & \cellcolor{Pomegranate} \emph{Pomegranate} & \cellcolor{Silver} \emph{Silver} & \cellcolor{Asbestos} \emph{Asbestos} \\[5ex] 
+
+\end{tabularx} 
+\label{fig:farger}
+\caption[Fargekombinasjoner]{Fargekombinasjoner som brukes i hi-fi prototypen}
+\end{figure}
