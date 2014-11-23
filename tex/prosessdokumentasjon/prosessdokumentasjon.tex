@@ -70,9 +70,14 @@ I noen tilfelder er det nødvendig å installere plugin \href{http://httpd.apach
 \item Systemer som benytter seg av SELinux (\href{http://en.wikipedia.org/wiki/Security-Enhanced_Linux}{Security Enhanced Linux}) må i tillegg legges til en policy der Apache skal få lov til å lese fra brukermapper. Dette er på grunn at SELinux er et oppsett av rettigheter som i tillegg overstyrer hvanlig skriv og leserettigheter i systemet på kernel nivå\footnote{Dette er ikke noe som vi skal beskrive i detalj og finnes her kun for å illustrere problemstilligen som bruekren kan bli utsatt for.}. 
 \end{itemize}
 
-Eksemplene over viser hvor vanskelig dt kan være å faktisk sette opp Apache webserver på sin egen maskin. Dette er et primært ekesempel på område der EasyDev kommer inn med enkle løsninger. Apache modulen i EasyDev er tenkt at den skal opprette alle disse konfigurasjoner for å få en fungerende server.
+Eksemplene over viser hvor vanskelig dt kan være å faktisk sette opp Apache webserver på sin egen maskin. Det er rett og slett mulig å skrive linkende lisete for hvert bilde i 
+Dette er et primært ekesempel på område der EasyDev kommer inn med enkle løsninger. Apache modulen i EasyDev er tenkt at den skal opprette alle disse konfigurasjoner for å få en fungerende server.
 
-Dersom vi se i figur \ref{fig:apache2} ser vi at undr oppsettet kan brukeren velge hvilke mapper som skal inkluderes i 
+Dersom vi se i figur \ref{fig:apache2} ser vi at undr oppsettet kan brukeren velge hvilke mapper som skal inkluderes i konfigurasjonen. Dette er mapper som webservern kommer til å ha mulighet å lese fra. 
+
+I neste trinn (figur \ref{fig:apache3}) blir brukeren presentert i hvilke av de valgt mappende ønsker man å benytte for å aktivere <<directory browsing>>. Dette er en funksjon som gjør det mulig å se innholdet i mappe se tjenes av serveren direkte i nettleseren. Dette er normalt en funksjon som ikke brukes på en <<live>> server men er meget bra å ha på en server som brukes til utvikling og testing. 
+
+
 
 
 % med flagg p setter vi hele denne figuren på en egen side
@@ -97,7 +102,7 @@ Dersom vi se i figur \ref{fig:apache2} ser vi at undr oppsettet kan brukeren vel
         \begin{subfigure}[b]{0.48\textwidth}
                 \includegraphics[width=\textwidth]
                 {./img/prosessdokumentasjon/lowfi/apache3.png}
-                \caption{Activere innhold i mapper}
+                \caption{Aktivere visning av innhold i mapper}
                 \label{fig:apache3}
         \end{subfigure}
         \hspace{0.05cm}
