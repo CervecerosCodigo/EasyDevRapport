@@ -74,14 +74,11 @@ Eksemplene over viser hvor vanskelig dt kan være å faktisk sette opp Apache we
 Dette er et primært ekesempel på område der EasyDev kommer inn med enkle løsninger. Apache modulen i EasyDev er tenkt at den skal opprette alle disse konfigurasjoner for å få en fungerende server.
 
 Dersom vi se i figur \ref{fig:apache2} ser vi at undr oppsettet kan brukeren velge hvilke mapper som skal inkluderes i konfigurasjonen. Dette er mapper som webservern kommer til å ha mulighet å lese fra. 
-
-I neste trinn (figur \ref{fig:apache3}) blir brukeren presentert i hvilke av de valgt mappende ønsker man å benytte for å aktivere <<directory browsing>>. Dette er en funksjon som gjør det mulig å se innholdet i mappe se tjenes av serveren direkte i nettleseren. Dette er normalt en funksjon som ikke brukes på en <<live>> server men er meget bra å ha på en server som brukes til utvikling og testing. 
-
-
-
-
+I neste trinn (figur \ref{fig:apache3}) blir brukeren presentert i hvilke av de valgt mappende ønsker man å benytte for å aktivere <<directory browsing>>. Dette er en funksjon som gjør det mulig å se innholdet i mappe se tjenes av serveren direkte i nettleseren. Dette er normalt en funksjon som ikke brukes på en <<live>> server men er meget brukbart ved både utvikling og testing. 
+Figur \ref{fig:apache4} viser hvilke typer av innstiksplugins som kan velges i tillegg til Apache installasjonen. Disse kan for eksempel være plugins som PHP eller MySQL eller andre. Hensikten er at man kan samla alle slike tillegg på en plass slika at brukeren kan også velge disse i et seinere tilfelde.
+Siste eksempel (figur \ref{fig:apache5}) viser mulighet for konfigurasjon av noen av mer avanserte tillegsmoduler. Disse kan f.eks. være støtte for flere vituelle servere av Apache noe som gir bedre skalerbarhet ved utvikling av flere prosjekter parallellt. 
 % med flagg p setter vi hele denne figuren på en egen side
-\begin{figure}[p]
+\begin{figure}[!ht]
         \centering
         \begin{subfigure}[b]{0.48\textwidth}
                 \includegraphics[width=\textwidth]
@@ -120,15 +117,19 @@ I neste trinn (figur \ref{fig:apache3}) blir brukeren presentert i hvilke av de 
                 \caption{Avanserte Apache moduler}
                 \label{fig:apache5}
         \end{subfigure}
-        
-        \vspace{0.6cm}
+        \vspace{0.1cm}
         \caption[Konfigurasjon av Apache webserver]{Eksempel på konfigurasjon av Apache webserver.}\label{fig:lowfiapache}
 \end{figure}
 
 
+\subsection{Oppsett av brukere og grupper}
+I følgende modul har vi mulighet til å sette både brukergrupper, brukere og rettigheter en enstake bruekre eller hele grupper av brukere. Modulen er tenkt å brukes da man tenker å benytte systemet for gruppearbeid slik at flere bruekere kan dele på samme resurser. De eksempler som beskrives her kan betraktes i figur \ref{fig:lowfibrukere}.
 
+Vi begynner på samme måte som i forrige eksempel å starter på fremsiden (figur \ref{fig:brukere1}). Istedenfor å velge modul servere går vi til modul <<System>> som innholder flere undermoduler som kan brukes til oppsett og konfigurasjon av selve virtuelle maskinen og brukergrensesnittet. 
+Vi kan derette (figur \ref{fig:brukere2}) sette opp en ny gruppe, slette gruppe eller gå videre med å legge til brukere til en gruppe. Under kontrollene ser vi også hvilke resurser som alerede er tildelt den gruppen og evntuelt kan vi fjerne disse rettigheter gjennom å sjekke en eller flere av alternativene.
+Dersom vi ønsker å legge til nye bruekre i systemet vårt kan vi gjøre detet i neste skjermbilde (figur \ref{fig:brukere3}) og på en enkel måte gå videre og legge til eller slette brukere. 
 % med flagg p setter vi hele denne figuren på en egen side
-\begin{figure}[p]
+\begin{figure}
         \centering
         \begin{subfigure}[b]{0.48\textwidth}
                 \includegraphics[width=\textwidth]
@@ -159,10 +160,10 @@ I neste trinn (figur \ref{fig:apache3}) blir brukeren presentert i hvilke av de 
                 \caption{Moduler og resurser for gruppe}
                 \label{fig:brukere4}
         \end{subfigure}
-        
-        \vspace{0.6cm}
+        \vspace{0.1cm}
         \caption[Konfigurasjon av brukere og grupper]{Eksempel på konfigurasjon av brukere og grupper.}\label{fig:lowfibrukere}
 \end{figure}
+Dersom vi ønsker kan vi gå videre til neste skjermbilde å legge til nye resurser som skal være tilgjengelige for spesifikk gruppe. Dette kan f.eks. dreie seg om en database, mappe alle sånn som tilgang til en konto på FTP server som kjører på systemet. 
 
 \section{Hi-fi prototype}
 
