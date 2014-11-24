@@ -26,6 +26,8 @@ Testpersonen kommer rett og slett å motta tre oppgaver absert på punktene over
 \item Din siste oppgave blir å konfigurere Apache webserver. Du skal legge til en mappe som skal være tilgjengelig for serveren. Etterpå skal du aktivere <<directory browsing>> for de mapper du har valgt og aktivere PHP modul på serveren.
 \end{enumerate}
 
+Testene gjennomføres etter prinsippen <<\textit{think out loud}>> som medfører i enkle trekk at testepersonen forteller høgt hva de tenker gjøre i hver situasjon da de gjennomfører sine oppgaver. Detter er nødvendig ettersom det er ikke implementert noen praktisk funksjonalitet i modellen. Tespersonen blir derfor presentert med kun en representasjon av det virkelige grensesnittet. Alle trinn som brukeren gjennomfører blir notert. Under forsøkene får testpersonen ingen hjelp for hvor man skal gjennomføre oppgavene.
+
 \section{Spørsmål}
 Testpersonen blir presenter med et flertall spørsmål under hver enkel kategori. Disse kommer til å grupperes etter forskjellige overordnede typer. Følgende er en liste på de spørsmålene som vi har valg for brukertesting.
 
@@ -67,11 +69,29 @@ Testpersonen blir presenter med et flertall spørsmål under hver enkel kategori
 \end{enumerate}
 
 \section{Testresultat}
-Testene ble gjennomført på hi-fi prototype plasert på en publik webserver under adresse:\\ \href{http://student.cs.hioa.no/~s198569/EasyDev/login.php}{\underline{http://student.cs.hioa.no/\~{}s198569/EasyDev/login.php}}. 
+Testene ble gjennomført på hi-fi prototype plasert på en publik webserver under adresse:\\ \url{http://student.cs.hioa.no/~s198569/EasyDev/login.php} 
+Det er ikke nødvendig med brukernavn eller passord for pålogging.
 
-\subsection{Design og navigasjon}
-Alle brukere gjorde seg rask kjent med hvordan hensikten var at man skal bruke systemet. Det var ganske vanlig med en tilbakemelding om at det var enkelt å direkte skjønne hvordan man skal navigere seg på startsiden uten å behøve <<tenke>> på hva man kan gjøre i neste trinn. Alle brukere mente at dette er et intuitivt grensesnitt og det var meget enekelt å finne frem til neste modul for å fullføre de stilte oppgavene.
+Det ble totalt testet 7 personer. Testene ble gjennomfør i kaféen ved Pilestredet 35 på ettermiddagen. Den testede gruppen bestod av kun studenter fra linjer som data, bygg og økonomi.
 
-\subsection{Brukeradministrasjon}
+\subsection{Hva er bra?}
+Alle brukere gjorde seg rask kjent med hvordan det var å bruke systemet. Alle testpersoner mente at det var ganske enkelt å navigere seg på startsiden uten å behøve <<tenke>>. Det mentes at layouten føltes intuitivt på en måte der de fleste kjenner seg igjen fra bruk av andre systemer. Det var ingen som hadde problem med å finne til den modul som de tregte å komme åt for å gjennomføre gitt oppgave.
+Det var flere tilbakemeldinger gjeldende god og brukervennlig layout.
 
-\subsection{Oppsett av webserver}
+Alle testperson klarte også å sette opp alle funksjoner som ettersportes for webserveroppsett. Dette tross at det er ikke alle som var kjent med de spesifikke underliggende modulene. Man var ombett å aktivere en viss modul hvilket kunde gjøres gjennom å kun kjenne til navnet til modulen.
+
+Det var kun positive tilbakemeldinger i forhold til bruk av farger. Nesten alle testpersoner mente at de brukte fargene gir et behagligt inntryk om samspiller på en positiv måte som bidrar til forhøyd brukeropplevelse.
+
+\subsection{Hva bør forbedres?}
+Noen brukere mente at layouten borde gjøres med visuelt tiltalende etters foreløpig gav den et inntrykk over et uferdig produkt.
+Det var noen mindre problemer med å konfigurere grupper da det var noen av testpersonen som ikke skjønte helt hensikten med brukeregrupper i systemet. Samme gjelde da det skulle tildeles resurser til en gruppe. Dette kan eventuelt skylle at vi har plasert flere valg som kan gjøres direkte fra modulen for gruppeadministrasjon (se fingur \ref{fig:brukerehi2} side \pageref{fig:brukerehi2}).
+
+Flertall brukere hadde også utfordring med å skjønne hvordan man bruker neste trinn i gruppedaministrasjon hvilket (bilde \ref{fig:brukerehi3} side \pageref{fig:brukerehi3}). For noen var det uklart dersom hensikten var å kun legge til brukere eller hvis man kunde også legge til grupper i dette bilde. Årsaken til dette er at bildet har en forhåndsdefiniert liste som består av både brukernavn og programmoduler hvilket gav litt uklar inntrykk relatert til bruksområde.
+
+I bilde \ref{fig:brukerehi4} (side \pageref{fig:brukerehi4}) var det noen uklarheter gjeldende til vhilken gruppe som man egentlig legger til modulene. Dette framgår i nvnet for vinuduet men noen av testpersonen mente at det borde gjøres mer tydelig. 
+
+Generelt i administrasjon av grupper var det noe forvirrende med at vi hadde lagt til to <<tilbake>> knapper på begge sider av dialogvindu. Dette viste seg være noe så uklart gjeldende hvilken hensikt disse har. Fra et brukerperspektiv ser det ut som at begge knapper leder til samme trinn. Dette er så klart feil ettersom venstre kanppen leder <<tilbake>> og høyre <<frem>> leder til neste trinn i dialogen.
+
+Gjelden alle dialogvinduer er det tenkt at det skal ikke være mulig å gjøre spesifike feil eller avslutte dialogen i førtid. Foreløpig er dialogene satt opp slik at dersom brukere klikker utenfor dialogvinduet kommer det forårsake at det lukkes. Dette var noe som flere av brukerne gjorde hvilket opfattedes som ganske frusterede ettersom man fikk egentlig begynne om hele prosesesen i modulen.
+
+Noen av tilbakemeldingene var riktet mot at når dialogboksen vises bør den være mer dominerende over de komponenter som ligger i bakgrunn. De bakomliggende komponentene borde tones ned slik disse ikke er lengre <<forstyrrende>> for den oppgave som man skal gjennomføre. Det er derfor tenkt at det skal implementeres et underliggende lag som er halvgjennomsikelig som ligger bak dialogboksen men over andre komponenter som meny eller andre knapper.

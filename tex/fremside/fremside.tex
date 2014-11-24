@@ -3,7 +3,7 @@
 
 \newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
 
-\definecolor{grey}{rgb}{0.9,0.9,0.9} % Color of the box surrounding the title - these values can be changed to give the box a different color	
+\definecolor{grey}{RGB}{22, 160, 133} % Color of the box surrounding the title - these values can be changed to give the box a different color	
 
 
 \thispagestyle{empty} % Remove page numbering on this page
@@ -11,21 +11,34 @@
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
-
+\vspace*{-5cm}
+\hspace*{10.6cm}
 \colorbox{grey}{
-	\parbox[t]{1.0\linewidth}{
-		\centering \fontsize{50pt}{80pt}\selectfont % The first argument for fontsize is the font size of the text and the second is the line spacing - you may need to play with these for your particular title
-		\vspace*{0.7cm} % Space between the start of the title and the top of the grey box
+
+	\parbox[]{0.28\linewidth}{
+		\centering 
+		\fontsize{50pt}{80pt}\selectfont % The first argument for fontsize is the font size of the text and the second is the line spacing - you may need to play with these for your particular title
+		\vspace*{19cm} % Space between the start of the title and the top of the grey box
 		
 % 		\hfill Logo \\
-		\hfill 
-		\includegraphics[width=80mm]{./img/fremside/logo.png} \\
+		%\hfill 
+		\hspace*{-2.4cm}
+		\includegraphics[width=70mm]{./img/fremside/logo.png}
+		\\
+		\vspace*{0.55cm}
 		%\hfill EasyDev \\
-		\hfill 
+		 
 		\fontsize{30pt}{50pt}\selectfont 
 		{\fontfamily{phv}\selectfont 
+		\hfill
 		TuxMin
 		\title{TuxMin}
+		}
+		\fontsize{10pt}{0pt}\selectfont 
+		{\fontfamily{phv}\selectfont 
+		\\
+		\hfill
+		Gruppeprosjekt MMI 
 		}
 		\par
 		
@@ -49,6 +62,8 @@
 
 
 \HRule{1pt}} % Horizontal line, thickness changed here
+\\
+		\today
 
 %----------------------------------------------------------------------------------------
 
