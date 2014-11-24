@@ -3,7 +3,7 @@
 Hensikten med testen er i grunn og bunn å forbedre produktet sin kvalitet mot sluttbrukeren gjennom å finne hvilke deler det grafiske grensesnitte som må forbedres. 
 
 \section{Gjennomførelse}
-Det som er viktig å vise for brukeren er at det ikke er brukeren som testes men produktet. Dette skal gjøres klar tfor alle testpersoner i testen. Antall testperson skal produktet skal testes på er $5 \pm 2$ testpersoner. Grunnen til dette er at oftest blir frekvensebildet samme uansett hvis man tester åtte, tredve elelr hundre brukere.\cite{lazar2010research}
+Det som er viktig å vise for brukeren er at det ikke er brukeren som testes men produktet. Dette skal gjøres klar tfor alle testpersoner i testen. Antall testperson skal produktet skal testes på er $5 \pm 2$ testpersoner. Grunnen til dette er at oftest blir frekvensebildet samme uansett hvis man tester åtte, tredve elelr hundre brukere.\cite{lazar2010research}\cite{book:utforming}
 
 Testet skal gjennomføres gjennom å brukeren får gjennomføre oppgaver basert på de moduler og deler som er implementert i hi-fi prototypen. Dette er noe som blir ganske begrenset foreløpig ettersom det er foreløpig får funksjoner som er implementert i prototypen. Resultatet av brukertesten kan være en god henvisning på dersom  vi eventuelt trenger å tenke om gjeldende noen av de grafiske delene i systemet. 
 De oppgaver som brukeren kommer å få blir da:
@@ -15,6 +15,16 @@ Testpersonen blir bedt om å gjennomføre enkel brukeradministrasjon. Brukeren k
 \item[Konfigurasjon av webserver]
 I stort sett samme som tidligere oppgave. Brukeren skal teste modulen for konfigurasjon av Apache webserver. Det er fordelaktig at vi tester på brukere som ikke har en tidligere erfaring med slik konfigurasjon. Det bli undersøkt dersom brukeren forstår hvert skjermbilde og kan forklare hva som er hensikten med alle trinn.
 \end{description}
+Testpersonen kommer rett og slett å motta tre oppgaver absert på punktene over. Oppgavene kommer å se ut på følgende måte:
+\begin{enumerate}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+
+\item Bruk én stund på å gjøre deg kjent med grensesnittet. Når du føler at du er kjent med konfigurasjonen kan gå videre med neste oppgave.
+\item Forsøk å konfigurere brukergrupper. Du skal legge til en ny brukergruppe og tildele noen resurser til den gruppen.
+\item Din siste oppgave blir å konfigurere Apache webserver. Du skal legge til en mappe som skal være tilgjengelig for serveren. Etterpå skal du aktivere <<directory browsing>> for de mapper du har valgt og aktivere PHP modul på serveren.
+\end{enumerate}
 
 \section{Spørsmål}
 Testpersonen blir presenter med et flertall spørsmål under hver enkel kategori. Disse kommer til å grupperes etter forskjellige overordnede typer. Følgende er en liste på de spørsmålene som vi har valg for brukertesting.
@@ -61,3 +71,7 @@ Testene ble gjennomført på hi-fi prototype plasert på en publik webserver und
 
 \subsection{Design og navigasjon}
 Alle brukere gjorde seg rask kjent med hvordan hensikten var at man skal bruke systemet. Det var ganske vanlig med en tilbakemelding om at det var enkelt å direkte skjønne hvordan man skal navigere seg på startsiden uten å behøve <<tenke>> på hva man kan gjøre i neste trinn. Alle brukere mente at dette er et intuitivt grensesnitt og det var meget enekelt å finne frem til neste modul for å fullføre de stilte oppgavene.
+
+\subsection{Brukeradministrasjon}
+
+\subsection{Oppsett av webserver}
