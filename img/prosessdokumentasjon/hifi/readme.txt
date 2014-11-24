@@ -1,0 +1,1 @@
+Har tatt alle screenshots med fullt vindu på en 1650x1080 skjerm
