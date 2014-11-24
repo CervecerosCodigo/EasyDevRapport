@@ -1,19 +1,18 @@
 \chapter{Introduksjon}
 
 \section{Om rapporten}
-Rapporten består av flere kapitler som kan leses hver for seg og som har hvert sine formål. Det er lagt stor vekt på dokumentasjon av beslutninger, og prosessen underveis.
-
-
+Rapporten består av flere kapitler som kan leses hver for seg og som har hvert sine formål. Det er lagt stor vekt på dokumentasjon av beslutninger, og prosessen underveis. 
+De viktigste punktene i rapporten er de som omhandler tolkning av oppgaven (avsnitt \ref{sec:tolkning}), avgrensningene vi gjorde (avsnitt \ref{sec:avgrensninger} og \ref{sec:begrensninger}), hvorfor vi har gjort som vi har gjort osv. 
 
 \begin{description}
 
-\item[Introduksjonen] Går gjennom litt av forutsetningene for oppgaven, målene vi har satt oss, tolkningen av oppgaven og valgene vi har tatt på bakgrunn av det. 
+\item[Introduksjonen] Går gjennom litt av forutsetningene for oppgaven, målene vi har satt oss, tolkningen av oppgaven og valgene vi tok på bakgrunn av det. 
 
 \item[Hva er EasyDev?] En introduksjon til produktet. gir kort beskrivelse av målgruppe og hvordan det er tenkt at produktet skal brukes.
 
-\item[Prosessdokumentasjon] Her beskrives det hvordan vi har jobbet med utviling av våre prototyper. Hvilke valg vi har tatt og hvorfor vi har tenkt som vi har gjort.
+\item[Prosessdokumentasjon] Her beskrives det hvordan vi har jobbet med utvikling av våre prototyper. Hvilke valg vi har tatt underveis og hvorfor vi har tenkt som vi har gjort.
 
-\item[Brukertesting] Vi har brukertestet vår hi-fi prototype på noen relevante brukere og gir en kort oppsumering av resultatene her.
+\item[Brukertesting] Vi har brukertestet vår hi-fi prototype på noen relevante brukere og gir en kort oppsummering av resultatene her.
 
 \item[Evaluering] Her ser vi med et kritisk øye på arbeidet vårt. Vi diskuterer selve produktet, begrensninger og hva vi kunne ha gjort annerledes hvis...
 
@@ -21,7 +20,7 @@ Rapporten består av flere kapitler som kan leses hver for seg og som har hvert 
 
 
 
-\section{Tolkning av oppgaven}
+\section{Tolkning av oppgaven} \label{sec:tolkning}
 Oppgaven skulle egentlig besvare følgende spørsmål: 
 \begin{quote}
 Et	blikk	inn	i	framtida:	Hvordan	kan	vi	om	10-20	år	bruke	teknologi	
@@ -29,31 +28,40 @@ Et	blikk	inn	i	framtida:	Hvordan	kan	vi	om	10-20	år	bruke	teknologi
 mennesker	som	har	spesielle behov.
 \end{quote}
 
-Vi tolkede oppgave litt anerldes. Som studenter i adre årskurs på høgskolen vet vel og godt hvordan det er å begynne på utdanningen og blir direkte kastet inn i en verden av teksbaserte konfigurasjonfiler. Vi ville derfro lage noe som ikke finnes fra før men kan hjelpe studenter med å starte opp de viktige delene i utdanningen sin insteden for å bruke tid på å sette opp et fungerende utviklingsssytem. 
+Da vi fikk tildelt prosjektoppgaven hadde vi allerede tenkt mye på et interessant prosjekt vi kunne jobbe med og som vi mente passet inn i MMI-faget. Da vi ble tildelt oppgavene som ga rammene for prosjektet var de en del annerledes enn det vi hadde lagt opp til.\\
+
+Som studenter i det andre året på høgskolen vet vi veldig godt hvordan det er å begynne på utdanningen og det å bli kastet inn i en verden av nye verktøy, konfigurasjon av egne maskiner og lignende for å få tilgang til skolens ressurser. Vi ville derfor lage noe som ikke finnes fra før men kan hjelpe studenter med å komme i gang med pensum i stedet for å bruke tid på å sette opp et fungerende utviklingsmiljø. \\
+Vi mener derfor at en portal for alle IT-studenter ved høgskolen som tilrettelegger for økt læring og gir bedre verktøy for samarbeid og gruppearbeid er et fullgodt alternativ til den oppgaveteksten som vi ble tildelt. Det ble selvsagt avklart med lærer før vi satt i gang med arbeidet. 
 
 \section{Formål}
-Å lage et system for nye studenter som underletter daglig arbeid og tillater å sette igang med utvikling og gruppearbeid uten å bruke tid på å studere manualer og konfigurajon av system.
+Å lage et system for nye studenter som forenkler arbeidet og mulighetene for å sette igang med utvikling og å jobbe sammen i gruppearbeid uten å bruke tid på å studere manualer og konfigurasjon av systemet. Dagens løsning fungerer dårlig da en ikke kan konfigurere miljøet man jobber mot, og ikke har mulighet for å jobbe sammen i gruppe på én brukers system. Les mer om det i avsnitt \ref{sec:hvaereasydev}.
 
 \section{Mål}
-Følgende mål ble satt opp for å gjøre det enkelt å avgrense oppgaven:
-\begin{description}
-\item[Teknologi] definer vhilken tekngologi som vi ønsker at vår produkt skal basere seg på.
-\item[Målgruppe] er det noen målgruppe som vi spesifikt ønsker å jobbe mot.
-\item[Fremtid] Er løsningen fremtidsorienter. Finns en andre produkter som gir samme funksjonalitet som kan ta over i fremtiden?
-\item[Faglig utfordring] Strekker vi oss lagt nok? Dersom vi ønsker å faktisk lage et produkt som idéen vår skal arbeidet også bidra til at vi blir flinkere utvilkere under reisen.
+Gi et nytt innspill på hvordan en institusjon som HIOA kan organisere og implementere verktøyene de tilbyr IT-studenter i årene fremover. 
+Målet er videre at det vi har kommet frem til i prosjektet skal kunne realiseres om en har tid og ressurser. Det er da følgelig ingen sci-fi løsning der man er avhengig av fremtidig utvikling på andre plan for å kunne implementere vårt produkt.
 
-\end{description}
+\section{Avgrensninger} \label{sec:avgrensninger}
 
-\section{Avgrensninger}
+\subsection{Hva skal prosjektet ikke levere}
+Prosjektet skal ikke resultere i et ferdig produkt. Det er ikke et mål med kurset eller prosjektoppgaven. Grunnet tiden har vi heller ikke mulighet til å implementere arkitektur og utvikle et fungerende produkt.
+
+\subsection{Hva skal prosjektet levere}
+Prosjektet skal resultere i en lo-fi og en hi-fi prototype for å visualisere hvordan vi som gruppe har tenkt at vårt produkt skal fungere. Prototypen skal gi en <<\textit{technology preview}>> over noen funksjoner som er tenkt at skal implementeres. \\
+Hovedfokuset blir likevel lagt på rapporten ettersom det er der man finner informasjon om gruppens visjoner, hvilke valg som blir tatt, prosessen underveis og vår egen evaluering av produktet. I tillegg lages det en poster/plakat som skal presentere løsningen vår.
+
+\subsection{Hvordan er prosjektet avgrenset}
+Følgende mål ble satt opp for å gjøre det enklere å avgrense oppgaven:
 \begin{description}
-\item[Hva oppgave ikke skal gjøre]
-Oppgaven skal ikke resultere i et ferdi produkt. Dette er ikke mål med kurset og vi har ikke tilgjengelig tid for å ta frem både akritektur og kode for en fungerende produkt og løsning.
-\item[Hva oppgaven skal levere]
-Oppgaven skal resultere i en low-fi og en hi-fi prototype for å visualisere hvordan vi som gruppe har tenkt at vårt produkt skal fungere. Prototypen skal gi en <<\textit{technology preview}>> over noen funksjoner som er tenkt at skal implementeres.
+\item[Tid] Tilgjengelig tid gir automatisk avgrensning i forhold til hvor konkret implementasjonen kan bli.
+\item[Teknologi] Definere hvilken teknologi vi ønsker at vårt produkt skal basere seg på.
+\item[Målgruppe] Hvilken målgruppe ønsker vi å jobbe mot.
+\item[Fremtid] Er løsningen fremtidsorientert? Finnes en andre produkter som gir samme funksjonalitet?
+\item[Faglig utfordring] Strekker vi oss lagt nok, eller for langt?
+
 \end{description}
 
 \section{Hjelpemidler og verktøy} \label{sec:hjelpogverkt}
-Til samarbeid i gruppen var brukt Google Drive og GitHub for utveksling av kildekode. Mockups til første protoype ble oprettet via \href{https://balsamiq.com/}{balsamiq mockups} plugin til Google Drive. \textit{Pecha Kucha} presentasjon er opprettet med \href{https://prezi.com/z_1ipfrf4m_3/skolelinux-pa-ny-mate/}{prezi}. Viktisgste UI elemter til hi-prototypen er lagd med \href{http://getbootstrap.com/}{bootstrap} og utformet med hjelp av med \href{http://designmodo.github.io/Flat-UI/}{FlatUI}. Til utvikling av kildekode bruktes Eclipse IDE med JavaScript, Web, og PHP eclipse miljø. Hi-fi prototype krever en webserver med PHP støtte. for utvikling og testing bruktes Apache web server. Kildekode er tilgjengelig på prosjektets git repository
+Underveis i prosjektet har vi brukt Google Drive og GitHub for utveksling av kildekode. Mockups til første prototype ble opprettet via \href{https://balsamiq.com/}{balsamiq mockups} plugin til Google Drive. \textit{Pecha Kucha} presentasjon er opprettet med \href{https://prezi.com/z_1ipfrf4m_3/skolelinux-pa-ny-mate/}{prezi}. Viktigste UI elemeter til hi-prototypen er laget med \href{http://getbootstrap.com/}{bootstrap} og utformet med hjelp av med \href{http://designmodo.github.io/Flat-UI/}{FlatUI}. Til utvikling av kildekode brukte vi Eclipse IDE med JavaScript, Web, og PHP eclipse miljø. Hi-fi prototype krever en webserver med PHP støtte. For utvikling og testing brukte vi Apache web server. Kildekode er tilgjengelig på prosjektets git repository
 \href{https://github.com/CervecerosCodigo/EasyDev}{https://github.com/CervecerosCodigo/EasyDev}.
 Rapporten er skrevet som \LaTeX{} kode og er tilgjengelig via en separat git repository \\ \href{https://github.com/CervecerosCodigo/EasyDevRapport}{https://github.com/CervecerosCodigo/EasyDevRapport}
 
