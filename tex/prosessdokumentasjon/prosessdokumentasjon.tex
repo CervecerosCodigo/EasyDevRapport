@@ -11,7 +11,6 @@ Test for sitering av kilder.\cite{forelesning:tulpesh}\cite{book:utforming}\cite
 \marginpar{Viktige prinsipper:
 feedback, constraints (bruker får ikke gjøre feil), affordances
 }
-\marginpar{Husk at vi borde ta med en navigasjonkart}
 \marginpar{Støtteord:
 Usability (brukbarhet): konsistens, brukerkontroll, passende presentasjon.
 }
@@ -167,96 +166,12 @@ Hvis vi ønsker kan vi gå videre til neste skjermbilde å legge til nye resurse
 
 \section{Hi-fi prototype}
 
-
-\begin{figure}[ht]
-%bruk \begin{figure}[ht] dersom figuren ikke skal flyte
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./img/prosessdokumentasjon/hifi/fremside.png}
-\caption[Hi-fi prototype]{Fremside for EasyDev som hi-fi prototype.}
-\label{fig:hifi_fremside}
-\end{figure}
-
-\subsection{Oppsett av apache webserver}
-\begin{figure}[p]
-        \centering
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a1.png}
-                \caption{Fremside -> Sett opp webserver}
-                \label{fig:apachehi1}
-        \end{subfigure}%
-        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-          %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a2.png}
-                \caption{Valg av mapper}
-                \label{fig:apachehi2}
-        \end{subfigure}
-       
-        \vspace{0.6cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a3.png}
-                \caption{Aktivere visning av innhold i mapper}
-                \label{fig:apachehi3}
-        \end{subfigure}
-        \hspace{0.05cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a4.png}
-                \caption{Valg av moduler}
-                \label{fig:apachehi4}
-        \end{subfigure}
-        
-        \vspace{0.6cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a5.png}
-                \caption{Avanserte Apache moduler}
-                \label{fig:apachehi5}
-        \end{subfigure}
-        \vspace{0.1cm}
-        \caption[Hi-fi prototype konfigurasjon av webserver]{Eksempel på konfigurasjon av Apache webserver som fremstiles på en hi-fi prototype}\label{fig:hifiapache}
-\end{figure}
-
-\subsection{Oppsett av brukere og grupper}
-\begin{figure}[h]
-        \centering
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/b1.png}
-                \caption{Fremside -> Velg brukeroppsett}
-                \label{fig:brukerehi1}
-        \end{subfigure}%
-        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-          %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/b2.png}
-                \caption{Grupper}
-                \label{fig:brukerehi2}
-        \end{subfigure}
-       
-        \vspace{0.4cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/b3.png}
-                \caption{Brukere}
-                \label{fig:brukerehi3}
-        \end{subfigure}
-        \hspace{0.02cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/b4.png}
-                \caption{Moduler og resurser for gruppe}
-                \label{fig:brukerehi4}
-        \end{subfigure}
-        \vspace{0.1cm}
-        \caption[Konfigurasjon av brukere og grupper i hi-fi prototypr]{Eksempel på konfigurasjon av brukere og grupper i hi-fi prototype}\label{fig:hifibrukere}
-\end{figure}
+Ta med hva som skille denne prototypen fra den forrige. Referer til kapittel 5 om hvorfor vi har gjort det slik. Nettopp at vi bare for forbedret den gamle prototypen og ikke utvidet funksjonalitet bak menyene.\\
+\marginpar{Husk at vi borde ta med en navigasjonkart}
 
 \section{Kriterier og avgjøresler}
-Følgende avsnitt beskriver hvilke og hvorfor vi har tatt de valg som vi har gjort under reisen. Vi skal fokusere på valg kriterier og valg fra et MMI perspektiv men det er også viktig å opplyse av andre kriterier som mer teknisk karaktær.
+Følgende avsnitt beskriver hvilke og hvorfor vi har tatt de valg som vi har gjort under reisen. Vi skal fokusere på valg kriterier og valg fra et MMI perspektiv men det er også viktig å opplyse av andre kriterier som mer teknisk karaktær.\\
+Begrunnelse om hvorfor vi har gjort som vi har gjort diskuteres mer i kapittel 5.
 
 \subsection{Virtuell maskin}
 System skal kjøre i en vituell maskin ettersom det er enekelt å både opprette slette eller gjenoprette slik løsning. Da en ny bruker skal starte en maskin trenger denne kun bli kopiert fra en avbildning og satt opp med riktig brukernavn og passord. Dersom brukeren ødelegger noe i maskinen blir det muligå eksportere konfigurasjonsfiler for valgte moduler og oprette en ny maskin med sammen med eksisterende konfigurasjonfiler f.eks. Apache.
