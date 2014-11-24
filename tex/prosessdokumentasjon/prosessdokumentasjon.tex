@@ -36,6 +36,8 @@ Presentasjonen skal være passende for de oppgave som systemet er tenkt at det s
 \end{figure}
 
 \section{Low-fi prototype} \label{sec:lowfi}
+\emph{Avsnittet innholder et stort antall mockups som representerer skjermbilder. Det er flere bilder som er plasert i teksmassen, dersom noen av komponenetene i bildene oppleves for små er samtlige av bildene presentert i høy oppløsning i appendiks \ref{sec:appendiksLowFi} side \pageref{sec:appendiksLowFi}.}
+
 Det er ganske vanlig at man til en low-fi prototype bruker papp eller papir fo rå visualisere hvordan man kan bruke en GUI. Vi valgte å benytte oss av \href{http://balsamiq.com/products/mockups/}{balsamiq mockups} hvilket gav oss mulighet å ikke bare visualisere hvordan brukergrensesnittet skulle se ut men også legge inn enkel funksjonalitet. Slik funksjonalitet bestod av at man fikk mulighet til å klikke seg videre til neste skjermbilda fra menyer. Dette gav en ganske grei opplevelse over hvordan det kommer til å føles da man bruker produktet.
 
 
@@ -166,93 +168,22 @@ Dersom vi ønsker å legge til nye bruekre i systemet vårt kan vi gjøre detet 
 Hvis vi ønsker kan vi gå videre til neste skjermbilde å legge til nye resurser som skal være tilgjengelige for spesifikk gruppe. Dette kan f.eks. dreie seg om en database, mappe alle sånn som tilgang til en konto på FTP server som kjører på systemet. 
 
 \section{Hi-fi prototype}
+\emph{Følgende avsnitt innholder ikke alle figurer over ferdi hi-fi prototype. Det er et flertall skjermbilder som må vises i full tekstbredde. Derfor er samtlige hi-fi mockup flyttet til appendiks \ref{sec:appendiksHiFi} side \pageref{sec:appendiksHiFi}.}
 
-
+Hi-fi prototypen er en viderutvikling av tidligere prototype som er gjort med hjelp av samme verktøy som skal brukes til ferdig produkt. Ved fremtagning av hi-fi prototype ble det brukt  html, css, javascript og php for å sy sammen funksjonalitet og få den tiø fungere som en nettside. I figur \ref{fig:hifi_fremside} ser hvordan fremsiden blir presentert. Dette kan gjerne sammenliknes med den tidligere mockupen figur \ref{fig:lowfi_fremside} side \pageref{fig:lowfi_fremside}.
 \begin{figure}[ht]
-%bruk \begin{figure}[ht] dersom figuren ikke skal flyte
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./img/prosessdokumentasjon/hifi/fremside.png}
 \caption[Hi-fi prototype]{Fremside for EasyDev som hi-fi prototype.}
 \label{fig:hifi_fremside}
 \end{figure}
 
-\subsection{Oppsett av apache webserver}
-\begin{figure}[p]
-        \centering
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a1.png}
-                \caption{Fremside -> Sett opp webserver}
-                \label{fig:apachehi1}
-        \end{subfigure}%
-        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-          %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a2.png}
-                \caption{Valg av mapper}
-                \label{fig:apachehi2}
-        \end{subfigure}
-       
-        \vspace{0.6cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a3.png}
-                \caption{Aktivere visning av innhold i mapper}
-                \label{fig:apachehi3}
-        \end{subfigure}
-        \hspace{0.05cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a4.png}
-                \caption{Valg av moduler}
-                \label{fig:apachehi4}
-        \end{subfigure}
-        
-        \vspace{0.6cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/a5.png}
-                \caption{Avanserte Apache moduler}
-                \label{fig:apachehi5}
-        \end{subfigure}
-        \vspace{0.1cm}
-        \caption[Hi-fi prototype konfigurasjon av webserver]{Eksempel på konfigurasjon av Apache webserver som fremstiles på en hi-fi prototype}\label{fig:hifiapache}
-\end{figure}
+Det er gjort litt annerledes tilnærming til hvordan dialogene til brukeren blir presentert i dene prototypen. Nærmere eksempel på dette presenteres i figur \ref{fig:hifi_brukerdialog}. Dialogen blir presentert øengre ned i forhold til den globale menye hvilket gjør at store deler av tomt område på fremsiden blir isteden brukt for visning av dialoger. Forandringer er gjort siden den første mockupen med hensikt for å ikke dekke manykomponenter. Det vil gjøre det mulig å velge en annen modul direkte uten å behøve avslutte den aktive modulen (forutsatt at alle andringer som den aktive moduler gjør er blitt lagret).
 
-\subsection{Oppsett av brukere og grupper}
-\begin{figure}[h]
-        \centering
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/b1.png}
-                \caption{Fremside -> Velg brukeroppsett}
-                \label{fig:brukerehi1}
-        \end{subfigure}%
-        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-          %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/b2.png}
-                \caption{Grupper}
-                \label{fig:brukerehi2}
-        \end{subfigure}
-       
-        \vspace{0.4cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/b3.png}
-                \caption{Brukere}
-                \label{fig:brukerehi3}
-        \end{subfigure}
-        \hspace{0.02cm}
-        \begin{subfigure}[b]{0.48\textwidth}
-                \includegraphics[width=\textwidth]
-                {./img/prosessdokumentasjon/hifi/b4.png}
-                \caption{Moduler og resurser for gruppe}
-                \label{fig:brukerehi4}
-        \end{subfigure}
-        \vspace{0.1cm}
-        \caption[Konfigurasjon av brukere og grupper i hi-fi prototypr]{Eksempel på konfigurasjon av brukere og grupper i hi-fi prototype}\label{fig:hifibrukere}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth,keepaspectratio,trim = {12cm 6cm 12cm 8cm}, clip]{./img/prosessdokumentasjon/hifi/a2.png}
+\caption[Hi-fi brukerdialog]{Eksempel over fremstilling av brukerdialog. Utklipet viser eksempel på ny design og hvor dialogen kan bli plassert i forhold til menyen.}
+\label{fig:hifi_brukerdialog}
 \end{figure}
 
 \section{Kriterier og avgjøresler}
