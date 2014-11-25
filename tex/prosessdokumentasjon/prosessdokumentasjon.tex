@@ -2,7 +2,7 @@
 %\marginpar{
 %Test for sitering av kilder.\cite{forelesning:tulpesh}\cite{book:utforming}\cite{book:desintsystems}
 %}
-\lettrine[lines=2]{I}{} følgende kappitel beskriver vi hvordan hele utviklinsprosessen for protitypene har foregått. Hensikten er at man skal illustrere hele prosessen fra idé, mockup til hi-hi prototype klar for brukertesting. Kapitlet består av mange for å på enklest muli måte ilustrere prosessen. for eventuell beskrivelse av funksjonalitet av de inngående moduler som er synlige på bildene henvises til appediks \ref{app:funksjonalitet}.
+\lettrine[lines=2]{F}{} ølgende kapittel beskriver hvordan hele utviklingsprosessen av prototypene har foregått og som illustrerer hele prosessen fra idé til mockup til hi-hi prototype. Kapittelet består av mange bilder for å på enklest mulig måte illustrere prosessen. For eventuell beskrivelse av funksjonalitet av de modulene som er synlige på bildene henvises det til appendiks \ref{app:funksjonalitet}.
 
 
 
@@ -15,16 +15,13 @@ feedback, constraints (bruker får ikke gjøre feil), affordances
 \marginpar{Støtteord:
 Usability (brukbarhet): konsistens, brukerkontroll, passende presentasjon.
 }
-Etter at idéen om hva vi skal jobbe med var klar og diskutert tok det ikke lang tid før vi ble enige om hvordan vi skal sette sammen vårt forslag til en helhet. Hele gruppen var tydelig på at vi ønsker i stor gra å benytte oss av en løsning som baserer seg tydelig på gestalt prinsipper.
-Det som var spesielt viktig var at man deler opp de forskjellige moduler i flere undermoduler slik at de bilder en visuell og logisk helhet. 
-Forslaget var ganske klart opplegg der alle viktige moduler blir satt asmmen i en overordnet gruppe som disse tilhører. I det første utkastet bestod disse av:
+Etter at idéen om hva vi skulle jobbe med var klar tok det ikke lang tid før vi ble enige om hvordan vi skal sette sammen vårt forslag til en helhet. Hele gruppen var tydelig på at vi i stor grad ønsket å benytte oss av en løsning som følger Gestalt-prinsipper for god design og layout.
+Systemet skulle kunne administreres via nettleser som gjør det mulig å bruke systemet fra hvilken som helst maskin og med eventuelle tilpasninger kan også gjøres slik at man også kan jobbe fra nettbrett eller telefon.
+På det tidspunktet handlet diskusjonen om hvordan vi skulle fordele de forskjellige modulene og funksjonalitetene på så få hovedområder som mulig, der hvert av de områdene blir et element i hovedmenyen. 
+I det første utkastet bestod disse av:
 \begin{center}
-\texttt{Editorer | Meldinger | Resurser | System | Servers}
+\texttt{Editorer | Meldinger | Resurser | System | Servere}
 \end{center}
-Dessa skulle plaseres på en velkomstside som innholdr også annen viktig informasjon for brukeren. Man skal bli presnetert med sin brukerikone i øvre høyre hjørn pg en hurtigtilgang til systeminstillinger. Under skal det også eventuelt presenteres noen <<widgets>> som viser systemstatus, påloggede bruker, andel brukt ram-minne, tilgjengelig lagringsplass og kjørende prosesser. Alt dette blir pakket ned til en dynamisk nettside og vil være tilgjengelig via en webbrowser. Muligheten å kontrollere systemet via en webbrowser gjør det mulig til å styre oppsettet av systemet fra hvilken manskin man enn ønsker og eventuelle tilpassninger kan også gjøres slik at konfigurasjonen kan også foregår fra nettbrett eller telefon.
-
-Det som er viktigst for oss her er at man samler opp komponentene på en spesifikk måte som gjør brukeropplevelsen så enkel som mulig. Vi synes ikke at brukeren skal behøve <<tenke>> over hvordan systemet skal brukes. Det skal være mulig for hvilken som helst person med noe data vane å begynne benytte systemet kun etter en rask overblikk av de grafiske komponentene på fremsiden.
-Presentasjonen skal være passende for de oppgave som systemet er tenkt at det skal gjøre. Det er derfor ingen anledning å overkomplisere noen av komponentene på grunn at f.eks. eliminere tom plass på siden. Den tomme plassen som er synlig i utkastet er tenkt at den skal brukes til å plassere menyer som skal åpnes. Vi ser på dette utkastet som at det ser inviterede ut til interaksjon ettersom det er få komponenter som er plasert i proksimitet til hverandre (mer om brukte gestalt prinsipper i avsnitt \ref{sec:lowfi}). Slik plassering gjør det ganske enkelt å finne ut hva som skal benyttes og hvorfor. Dette kan ses på som <<constraints>> der brukeren ikke kan gjøre mye annet enn de funksjoner som gjør det mulig til å benytte seg av for tilfeldet.\cite{nielsen2000designing}
 
 
 
@@ -36,15 +33,15 @@ Presentasjonen skal være passende for de oppgave som systemet er tenkt at det s
 \end{figure}
 
 \section{Low-fi prototype} \label{sec:lowfi}
-\emph{Avsnittet innholder et stort antall mockups som representerer skjermbilder. Det er flere bilder som er plasert i teksmassen, dersom noen av komponenetene i bildene oppleves for små er samtlige av bildene presentert i høy oppløsning i appendiks \ref{sec:appendiksLowFi} side \pageref{sec:appendiksLowFi}.}
+\emph{Avsnittet inneholder et stort antall mockups som representerer forskjellige skjermbilder. Det er flere bilder som er plassert i teksten, og dersom noen av komponentene i bildene oppleves for små er samtlige av bildene presentert i høy oppløsning i appendiks \ref{sec:appendiksLowFi} side \pageref{sec:appendiksLowFi}.}
 
-Det er ganske vanlig at man til en low-fi prototype bruker papp eller papir fo rå visualisere hvordan man kan bruke en GUI. Vi valgte å benytte oss av \href{http://balsamiq.com/products/mockups/}{balsamiq mockups} hvilket gav oss mulighet å ikke bare visualisere hvordan brukergrensesnittet skulle se ut men også legge inn enkel funksjonalitet. Slik funksjonalitet bestod av at man fikk mulighet til å klikke seg videre til neste skjermbilda fra menyer. Dette gav en ganske grei opplevelse over hvordan det kommer til å føles da man bruker produktet.
+Det er ganske vanlig at man til en low-fi prototype bruker papp eller papir for å visualisere hvordan man kan bruke en GUI. Vi valgte å benytte oss av \href{http://balsamiq.com/products/mockups/}{balsamiq mockups} som ga oss mulighet til å ikke bare visualisere hvordan brukergrensesnittet skulle se ut men også legge inn enkel funksjonalitet. Blant annet at man fikk mulighet til å klikke seg videre til neste skjermbilde direkte ved å trykke på fra menyer eller knapper i mockupen. Dette ga en ganske grei opplevelse av hvordan det kommer til å føles når man bruker produktet.
 
 
-Dersom vi tar en rask overblikk over framsiden i figur \ref{fig:lowfi_fremside} ser vi at hver enkel modul er gruppert etter gestalt prinsippen for proksimitet og elementer.\cite{forelesning:tulpesh}
+Dersom vi tar et rask overblikk over framsiden i figur \ref{fig:lowfi_fremside} ser vi at hver enkelt modul er gruppert etter gestalt prinsipper for proksimitet og elementer.\cite{forelesning:tulpesh}
 
-Prototypen inkluderer eksempel over konfigurasjon over to forskjellige funksjoner.
-Det er valig at i en prototype fokuserer man på en horisontell eller vertiklall implementasjon. Der i den horisontelle versjonen implementerer man få eller ingen funksjoner som går på dybden med insteden forsøker man å vise bredden av muligheter i et system eller grensesnitt. I den vertikale implementasjonen velger man insteden å begrense bredden på hva prototypen kan vise eller gjøre med insteden implementerer man en eller flere funksjoner på dybdeben.\cite{book:utforming}
+Prototypen inkluderer eksempel på konfigurasjon av to forskjellige funksjoner.
+Det er vanlig at i en prototype fokuserer man på en horisontal eller vertikal implementasjon. Der man i den horisontale versjonen implementerer få eller ingen funksjoner som går i dybden med istedet forsøker man å vise bredden av muligheter i et system eller grensesnitt. I den vertikale implementasjonen velger man insteden å begrense bredden på hva prototypen kan vise eller gjøre med insteden implementerer man en eller flere funksjoner på dybdeben.\cite{book:utforming}
 På dette studium har vi valgt å avgrense disse til konfigurasjon av Apache webserver og oppsett av brukere og grupper. 
 
 \begin{figure}
