@@ -19,10 +19,25 @@ Etter at idéen om hva vi skulle jobbe med var klar tok det ikke lang tid før v
 Systemet skulle kunne administreres via nettleser som gjør det mulig å bruke systemet fra hvilken som helst maskin og med eventuelle tilpasninger kan også gjøres slik at man også kan jobbe fra nettbrett eller telefon.
 På det tidspunktet handlet diskusjonen om hvordan vi skulle fordele de forskjellige modulene og funksjonalitetene på så få hovedområder som mulig, der hvert av de områdene blir et element i hovedmenyen. 
 I det første utkastet bestod disse av:
-\begin{center}
-\texttt{Editorer | Meldinger | Resurser | System | Servere}
-\end{center}
+%\begin{center}
+%\texttt{Editorer | Meldinger | Resurser | System | Servere}
+%\end{center}
+\begin{table}[h]
+\newcommand{\paddA}{1ex}
+\newcommand{\paddB}{0.2ex}
+\begin{tabularx}{\textwidth}{|*5{>{\centering\arraybackslash}X|}@{}|}
+\hline
+\vspace*{\paddA} Editorer & \vspace*{\paddA} Meldinger & \vspace*{\paddA} Resurser & \vspace*{\paddA} System & \vspace*{\paddA} Servere \\[2ex] 
+\hline
+\vspace*{\paddB} Java		&	\vspace*{\paddB} HTML Val			& 	\vspace*{\paddB} Meldinger 	& 	\vspace*{\paddB} Apache 	& \vspace*{\paddB} Brannmur \\
+PHP		& 	CSS Validering 	& 				& 	MySQL 	& Brukergrupper \\
+MySQL	& 	W3Schools 		& 				& 	SSH 		& Logg \\
+C 		& 	DropBox 			& 				& 			& Filbehnadling \\
+ 		& 	Terminal \vspace*{\paddB} 		& 				& 			& Systeminfo \vspace*{\paddB} \\
 
+\hline
+\end{tabularx} 
+\end{table}
 
 
 \begin{figure}
