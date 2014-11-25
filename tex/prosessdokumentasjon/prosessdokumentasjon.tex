@@ -56,8 +56,8 @@ Det er ganske vanlig at man til en low-fi prototype bruker papp eller papir for 
 Dersom vi tar et rask overblikk over framsiden i figur \ref{fig:lowfi_fremside} ser vi at hver enkelt modul er gruppert etter gestalt prinsipper for proksimitet og elementer.\cite{forelesning:tulpesh}
 
 Prototypen inkluderer eksempel på konfigurasjon av to forskjellige funksjoner.
-Det er vanlig at i en prototype fokuserer man på en horisontal eller vertikal implementasjon. Der man i en horisontal implementasjon implementerer få eller ingen funksjoner som går i dybden med istedet forsøker man å vise bredden av muligheter i et system eller grensesnitt. I den vertikale implementasjonen velger man istedet å begrense bredden på hva prototypen kan vise eller gjøre og istedet implementerer en eller flere funksjoner i dybden.\cite{book:utforming}
-Vi valgte å avgrense til implementasjon av Apache webserver og oppsett av brukere og grupper. 
+Det er vanlig at i en prototype fokuserer man på en horisontal eller vertikal implementasjon. Der man i den horisontale versjonen implementerer få eller ingen funksjoner som går i dybden med istedet forsøker man å vise bredden av muligheter i et system eller grensesnitt. I den vertikale implementasjonen velger man insteden å begrense bredden på hva prototypen kan vise eller gjøre med insteden implementerer man en eller flere funksjoner på dybdeben.\cite{book:utforming}
+På dette studium har vi valgt å avgrense disse til konfigurasjon av Apache webserver og oppsett av brukere og grupper. 
 
 \begin{figure}
 %bruk \begin{figure}[ht] dersom figuren ikke skal flyte
@@ -67,31 +67,31 @@ Vi valgte å avgrense til implementasjon av Apache webserver og oppsett av bruke
 \end{figure}
 
 
-I påfølgende avsnitt beskriver vi i detalj funksjonaliteten til to moduler. Det er grunnlegende moduler i systemet og som har vært med siden den opprinnelige idéen ble unnfanget. De to modulene er gode eksempler på hvordan vi har tenkt at produktet skal fungere.
+I etterfølgende seksjoner beskriver vi i detalj funksjonaliteeten til to moduler. Disse er grunnelgende moduler for systemet som har følgt med siden den ursprunglige idéen. Disse moduler er et godt eksempel på hvordan vi har tentk at produktet skal fungere. Derfør ønsker vi å beskrive de mer detaljert.
 
 \subsection{Oppsett av apache webserver}
-Her går vi nærmere inn på hvordan det er tenkt at en submodul for konfigurasjon og oppsett av serverelement skal brukes. Alle trinn som beskrives er presentert i figur \ref{fig:lowfiapache}.
+Her tentke vi gå nærmere på å vise hvordan det er tenkt at en submodul for konfigurasjon og oppsett av serverelement skal brukes. Alle trinn som beskrives er presentert i figur \ref{fig:lowfiapache}.
 
-Vi utgår fra at det er intuitivt å velge modul \texttt{Servere} dersom man ønsker å konfigurere en tjener. Modulen ligger i hovedmenyen med en nedtrekksmeny som viser hvilke servere man har mulighet til å konfigurere, figur \ref{fig:apache1}. 
-Apache webserver trenger å vite hvilke mapper som skal deles ut som webområder. Hvis man installerer apache på en Linux manskin kommer den som standard å lese fra mappe \texttt{/var/www} og som har kun root tilgang. Vi vil ikke endre rettigheter for denne mappe ettersom de vi stride mot standarden for rettigheter i systemet og utgjøre en sikkerhetsrisiko.\cite{book:unixprog}
-Det vi ønsker å gjøre istedet er å definere om innstillinger i Apache slik at serveren leser fra brukerens sin egen mappe. Dette er normalt en utfordring ettersom det må gjøres i form av to til tre trinn:\footnote{Antall trinn her er ganske avhengig av hvilket Linux system som brukes}
+Vi utgår fra at dette er intuitiv å velge modul \texttt{Servere} dersom man ønsker å konfigurere en tjener. Modulen er tilgjengelig på fremsiden med en rullmeny som viser hvilke servere som vi har mulighet til å konfigurere, figur \ref{fig:apache1}. 
+Apache webserver trenger å vite hvilke mapper som denne skal lese fra. Hvis man installerer apache på en Linux manskin kommer den som standard å lese fra mappe \texttt{/var/www} som har kun root tilgang. Vi vil ikke endre rettigheter for denne mappe ettersom de vi stride mot standarden for rettigheter i systemet og utgjøre en sikkerhetsrisiko.\cite{book:unixprog}
+Det som vi ønsker å gjøre isteden er å definere om instllinger i Apache slik at serveren leser fra brukerens sin egen mappe. Dette er normalt en utfording ettersom det må gjøres i form av to til tre trinn:\footnote{Antall trinn her er ganske avhegig av hvilket Linux system som brukes}
 
 \begin{itemize}
-\item Endre konfigurasjon i apache.conf til å lese fra brukerens hjemmemappe. Det må opprettes en spesifikk mappe f.eks. \texttt{/home/bruker/html}. 
+\item Endre konfigurasjon i apache.conf til å istedenfor eller i tillegg lese fra brukerens hjemmemappe. Det må opprettes en spesifikk mappe f.eks. \texttt{/home/bruker/html}. 
 I noen tilfelder er det nødvendig å installere plugin \href{http://httpd.apache.org/docs/2.2/mod/mod_userdir.html}{\texttt{mod\_{}userdir}}. Dette vil gjøre det mulig å lese filene vis følgende adresse: \texttt{http://localhost/\~{}bruker/fil.html}
 
-\item Endre rettigheter til den mappen i hjemmemappen som filene skal leses fra. Dette forutsetter at brukeren og Apache webserver er i samme brukergruppe. Oftest må brukeren bli lagt til \texttt{www} eller \texttt{httpd} gruppe på systemet. Det er selvfølgelig mulig å åpne mappen helt, slik at alle grupper i systemet vil ha tilgang til denne, men slik tilnærming senker sikkerheten i stor grad i et flerbrukersystem. Dette er noe som kan være veldig vanskelig for nybegynnere, der man i starten faktisk velger å åpne mappen helt ettersom man ofte ikke greier å teste om rettighetene er satt riktig.
+\item Endre rettigheter til den mappe i hjemmemappe som filene skal leses fra. Dette forutsetter at brukeren og Apache webserver er i samme brukeregruppe. Oftest må brukeren bli lagt til \texttt{www} eller \texttt{httpd} gruppe på systemet. Det er selvfølgelig mulig å åpne mappen helt slik at alle grupper i systemet vi ha tilgang til denne men slik tilnærming senker sikkerheten i stor grad i et flerbrukersystem. Dette er noen som lager en del vanskeligheter for nybegynnere og der man i starten faktisk velger å åpne mappen helt ettersom man oftest ikke har mulighet å teste dersom rettighetene er satt riktig hvis man har kun en bruker.
 
-\item Systemer som benytter seg av SELinux (\href{http://en.wikipedia.org/wiki/Security-Enhanced_Linux}{Security Enhanced Linux}) må i tillegg legge til en policy der Apache skal få lov til å lese fra brukermapper. Dette er på grunn at SELinux er et oppsett av rettigheter som i tillegg overstyrer vanlig skriv og leserettigheter i systemet på kernel nivå\footnote{Dette er ikke noe som vi skal beskrive i detalj og nevnes her kun for å illustrere problemstillingen som brukeren kan bli utsatt for.}. 
+\item Systemer som benytter seg av SELinux (\href{http://en.wikipedia.org/wiki/Security-Enhanced_Linux}{Security Enhanced Linux}) må i tillegg legges til en policy der Apache skal få lov til å lese fra brukermapper. Dette er på grunn at SELinux er et oppsett av rettigheter som i tillegg overstyrer hvanlig skriv og leserettigheter i systemet på kernel nivå\footnote{Dette er ikke noe som vi skal beskrive i detalj og finnes her kun for å illustrere problemstilligen som bruekren kan bli utsatt for.}. 
 \end{itemize}
 
-Eksemplene over viser hvor vanskelig det kan være å faktisk sette opp Apache webserver på sin egen maskin.  
-Dette er et godt eksempel på hvor EasyDev kommer inn med enkle løsninger. Apache modulen i EasyDev er tiltenkt brukt slik at alle disse konfigurasjonene blir tatt hånd om av systemet, og brukeren har et enkelt grensesnitt å forholde seg til.
+Eksemplene over viser hvor vanskelig dt kan være å faktisk sette opp Apache webserver på sin egen maskin. Det er rett og slett mulig å skrive linkende lisete for hvert bilde i 
+Dette er et primært ekesempel på område der EasyDev kommer inn med enkle løsninger. Apache modulen i EasyDev er tenkt at den skal opprette alle disse konfigurasjoner for å få en fungerende server.
 
-Dersom vi ser i figur \ref{fig:apache2} ser vi at i konfigurasjonen kan brukeren velge hvilke mapper som skal inkluderes som et webområde. Altså mapper som webserveren lese fra og vise som websider.
-I neste trinn (figur \ref{fig:apache3}) blir brukeren presentert for hvilke av de valgte mappene man ønsker man å benytte for å aktivere <<directory browsing>>. Dette er en funksjon som gjør det mulig å se innholdet i en mappe direkte i nettleseren. Dette er normalt en funksjon som ikke brukes på en <<live>> server men er meget brukbart ved både utvikling og testing. 
-Figur \ref{fig:apache4} viser hvilke typer plugins som kan velges som tillegg i Apache installasjonen. Disse kan for eksempel være plugins som PHP eller MySQL eller andre. Hensikten er at man kan samle alle slike tillegg på en plass slik at brukeren kan velge disse på et senere tidspunkt.
-Siste eksempel (figur \ref{fig:apache5}) viser mulighet for konfigurasjon av noen av mer avanserte tilleggsmoduler. Disse kan f.eks. være støtte for flere vituelle servere av Apache noe som gir bedre skalerbarhet ved utvikling av flere prosjekter parallelt. 
+Dersom vi se i figur \ref{fig:apache2} ser vi at undr oppsettet kan brukeren velge hvilke mapper som skal inkluderes i konfigurasjonen. Dette er mapper som webservern kommer til å ha mulighet å lese fra. 
+I neste trinn (figur \ref{fig:apache3}) blir brukeren presentert i hvilke av de valgt mappende ønsker man å benytte for å aktivere <<directory browsing>>. Dette er en funksjon som gjør det mulig å se innholdet i mappe se tjenes av serveren direkte i nettleseren. Dette er normalt en funksjon som ikke brukes på en <<live>> server men er meget brukbart ved både utvikling og testing. 
+Figur \ref{fig:apache4} viser hvilke typer av innstiksplugins som kan velges i tillegg til Apache installasjonen. Disse kan for eksempel være plugins som PHP eller MySQL eller andre. Hensikten er at man kan samla alle slike tillegg på en plass slika at brukeren kan også velge disse i et seinere tilfelde.
+Siste eksempel (figur \ref{fig:apache5}) viser mulighet for konfigurasjon av noen av mer avanserte tillegsmoduler. Disse kan f.eks. være støtte for flere vituelle servere av Apache noe som gir bedre skalerbarhet ved utvikling av flere prosjekter parallellt. 
 % med flagg p setter vi hele denne figuren på en egen side
 \begin{figure}[p]
         \centering
@@ -138,7 +138,7 @@ Siste eksempel (figur \ref{fig:apache5}) viser mulighet for konfigurasjon av noe
 
 
 \subsection{Oppsett av brukere og grupper}
-I følgende modul har man mulighet til å sette både brukergrupper, brukere og rettigheter en en enkelt bruker eller hele grupper av brukere. Modulen er tenkt å brukes i forbindelse med gruppearbeid slik at flere brukere kan dele på samme resurser. De eksempler som beskrives her kan betraktes i figur \ref{fig:lowfibrukere}. 
+I følgende modul har vi mulighet til å sette både brukergrupper, brukere og rettigheter en enstake bruekre eller hele grupper av brukere. Modulen er tenkt å brukes da man tenker å benytte systemet for gruppearbeid slik at flere bruekere kan dele på samme resurser. De eksempler som beskrives her kan betraktes i figur \ref{fig:lowfibrukere}. 
 % med flagg p setter vi hele denne figuren på en egen side
 \begin{figure}[h]
         \centering
@@ -174,49 +174,51 @@ I følgende modul har man mulighet til å sette både brukergrupper, brukere og 
         \vspace{0.1cm}
         \caption[Konfigurasjon av brukere og grupper]{Eksempel på konfigurasjon av brukere og grupper.}\label{fig:lowfibrukere}
 \end{figure}
-Vi begynner på samme måte som i forrige eksempel og starter på fremsiden (figur \ref{fig:brukere1}). I stedet for å velge modulen <<Servere>> går vi til modul <<System>> som innholder flere undermoduler som kan brukes til oppsett og konfigurasjon av selve den virtuelle maskinen og brukergrensesnittet. 
-Vi kan deretter (figur \ref{fig:brukere2}) sette opp en ny gruppe, slette gruppe eller gå videre med å legge til brukere til en gruppe. Vi også se hvilke ressurser som allerede er tildelt en gruppe og eventuelt kan vi fjerne disse rettighetene ved å ta haken et eller flere av alternativene.\\
-Dersom vi ønsker å legge til nye brukere i systemet vårt kan vi gjøre det i neste skjermbilde (figur \ref{fig:brukere3}) og på en enkel måte gå videre og legge til eller slette brukere.
-Hvis vi ønsker kan vi gå videre til neste skjermbilde og legge til nye ressurser som skal være tilgjengelige for en spesifikk gruppe. Dette kan f.eks. dreie seg om en database, et webområde eller lignende, der alle som er medlem i en gruppe har tilgang.
+Vi begynner på samme måte som i forrige eksempel å starter på fremsiden (figur \ref{fig:brukere1}). Istedenfor å velge modul servere går vi til modul <<System>> som innholder flere undermoduler som kan brukes til oppsett og konfigurasjon av selve virtuelle maskinen og brukergrensesnittet. 
+Vi kan derette (figur \ref{fig:brukere2}) sette opp en ny gruppe, slette gruppe eller gå videre med å legge til brukere til en gruppe. Under kontrollene ser vi også hvilke resurser som alerede er tildelt den gruppen og evntuelt kan vi fjerne disse rettigheter gjennom å sjekke en eller flere av alternativene.
+Dersom vi ønsker å legge til nye bruekre i systemet vårt kan vi gjøre detet i neste skjermbilde (figur \ref{fig:brukere3}) og på en enkel måte gå videre og legge til eller slette brukere.
+Hvis vi ønsker kan vi gå videre til neste skjermbilde å legge til nye resurser som skal være tilgjengelige for spesifikk gruppe. Dette kan f.eks. dreie seg om en database, mappe alle sånn som tilgang til en konto på FTP server som kjører på systemet. 
 
 \section{Hi-fi prototype}
-\emph{Følgende avsnitt inneholder ikke figurer av all funksjonalitet i hi-fi prototypen. Det er et flertall skjermbilder som må vises i full bredde. Derfor er samtlige hi-fi mockup flyttet til appendiks \ref{sec:appendiksHiFi} side \pageref{sec:appendiksHiFi}.}
+\emph{Følgende avsnitt innholder ikke alle figurer over ferdi hi-fi prototype. Det er et flertall skjermbilder som må vises i full tekstbredde. Derfor er samtlige hi-fi mockup flyttet til appendiks \ref{sec:appendiksHiFi} side \pageref{sec:appendiksHiFi}.}
 
-Hi-fi prototypen er en videreutvikling av tidligere prototype som er gjort med hjelp av samme verktøy som skal brukes til ferdig produkt. Ved utvikling av hi-fi prototype ble det brukt  html, css, javascript og php for å sy sammen funksjonalitet og få den til å fungere som en nettside. I figur \ref{fig:hifi_fremside} ser man hvordan fremsiden blir presentert. Dette kan gjerne sammenliknes med den tidligere mockupen figur \ref{fig:lowfi_fremside} side \pageref{fig:lowfi_fremside}. Det er ikke bestemt hva som skal vises på fremsiden enda, men mest sannsynlig blir det meldinger fra lærer og de man jobber i gruppe med.
+Hi-fi prototypen er en viderutvikling av tidligere prototype som er gjort med hjelp av samme verktøy som skal brukes til ferdig produkt. Ved fremtagning av hi-fi prototype ble det brukt  html, css, javascript og php for å sy sammen funksjonalitet og få den tiø fungere som en nettside. I figur \ref{fig:hifi_fremside} ser hvordan fremsiden blir presentert. Dette kan gjerne sammenliknes med den tidligere mockupen figur \ref{fig:lowfi_fremside} side \pageref{fig:lowfi_fremside}.
 \begin{figure}[ht]
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./img/prosessdokumentasjon/hifi/fremside.png}
 \caption[Hi-fi prototype]{Fremside for EasyDev som hi-fi prototype.}
 \label{fig:hifi_fremside}
 \end{figure}
 
-Det er en litt annerledes tilnærming til hvordan dialogvinduene til brukeren blir presentert i denne prototypen. Se figur \ref{fig:hifi_brukerdialog}. Dialogen blir presentert lengre ned i forhold til den hovedmenyen som medfører at store deler av det tomme området på fremsiden blir i stedet brukt for visning av dialoger. 
+Det er gjort litt annerledes tilnærming til hvordan dialogene til brukeren blir presentert i dene prototypen. Nærmere eksempel på dette presenteres i figur \ref{fig:hifi_brukerdialog}. Dialogen blir presentert øengre ned i forhold til den globale menye hvilket gjør at store deler av tomt område på fremsiden blir isteden brukt for visning av dialoger. Forandringer er gjort siden den første mockupen med hensikt for å ikke dekke manykomponenter. Det vil gjøre det mulig å velge en annen modul direkte uten å behøve avslutte den aktive modulen (forutsatt at alle andringer som den aktive moduler gjør er blitt lagret).
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.8\textwidth,keepaspectratio,trim = {12cm 6cm 12cm 8cm}, clip]{./img/prosessdokumentasjon/hifi/a2.png}
-\caption[Hi-fi brukerdialog]{Eksempel over fremstilling av brukerdialog. Utklippet viser eksempel på ny design hvor dialogen er plassert i forhold til menyen.}
+\caption[Hi-fi brukerdialog]{Eksempel over fremstilling av brukerdialog. Utklipet viser eksempel på ny design og hvor dialogen kan bli plassert i forhold til menyen.}
 \label{fig:hifi_brukerdialog}
 \end{figure}
 
-\section{Kriterier og avgjørelser}
-Følgende avsnitt beskriver hvilke og hvorfor vi har tatt de valg som vi har gjort under reisen. Vi skal fokusere på valg kriterier og valg fra et MMI perspektiv men det er også viktig å opplyse av andre kriterier som mer teknisk karakter.
+\section{Kriterier og avgjøresler}
+Følgende avsnitt beskriver hvilke og hvorfor vi har tatt de valg som vi har gjort under reisen. Vi skal fokusere på valg kriterier og valg fra et MMI perspektiv men det er også viktig å opplyse av andre kriterier som mer teknisk karaktær.
 
 \subsection{Virtuell maskin}
-System skal kjøre i en vituell maskin ettersom det er enkelt å både opprette slette eller gjenopprette slik løsning. Da en ny bruker skal starte en maskin trenger denne kun å bli kopiert fra et image og satt opp med riktig brukernavn og passord. Dersom brukeren ødelegger noe i maskinen er det mulig å eksportere konfigurasjonsfiler for valgte moduler og opprette en ny maskin sammen med eksisterende konfigurasjonfiler, til f.eks. Apache.
+System skal kjøre i en vituell maskin ettersom det er enekelt å både opprette slette eller gjenoprette slik løsning. Da en ny bruker skal starte en maskin trenger denne kun bli kopiert fra en avbildning og satt opp med riktig brukernavn og passord. Dersom brukeren ødelegger noe i maskinen blir det muligå eksportere konfigurasjonsfiler for valgte moduler og oprette en ny maskin med sammen med eksisterende konfigurasjonfiler f.eks. Apache.
 
 \subsection{Webbasert}
-Ettersom grensesnittet er webbasert blir det tilgjengelig fra hvilken datamaskin som helst uavhengig operativsystem eller nettleser. Systemet vil få en god skalering da det blir enkelt å sette inn eller fjerne moduler. Det vil også være relativ liten terskel for studenter å utvikle egne moduler dersom man synes at noen moduler mangler i systemet. 
+Ettersom grensesnittet er webbasert blir dt tilgjengelig fra hvilken datamaskin som helst uavhengig operativsystem eller nettleser. Systemet vil få en god skalering da  det blir enkelt å sette inn eller fjerne moduler. Det vil også være relativ liten terskel for studenter å utvikle egene moduler dersom man sysnes at noen moduler mangler i systemet. 
 
 \subsection{Bruk av visuelle elementer}
-Som tidligere beskrevet i avsnitt \ref{sec:utkast} og \ref{sec:lowfi} har vi valgt å benytte oss av gestalt prinsipper ved plassering av alle visuelle komponenter. Hensikten er at når brukeren for første gang logger på systemet skal man kunne bruke det helt intuitivt og uten å behøve tenkte på hvordan det er implementert.
+Som tidligere beskrevet i avsnitt \ref{sec:utkast} og \ref{sec:lowfi} har vi valgt å strikt benytte oss av gestalt prinsipper ved plassering av alle visuelle kompoenter. Hensikten er at når brukeren for første gang besøker fremsiden til systemet skal man kunne bruke denne fulstendig intuitivt og uten å behøve tenkte på hvordan forskejllige kontroller er plasert. 
 
-Et godt eksempel på dette er plassering av alle knapper på fremsiden. Disse har vi valgt å legge horisontalt med samme avstand fra hverandre. Slik plassering danner tilhørighet, man vet at disse henger sammen (\textit{proximity, element connectedness, similarity}). I tillegg forsterkes dette gjennom at vi bruker samme farger på alle de komponentene.\cite{forelesning:tulpesh}. Vi vil gå videre med disse prinsippene ved eventuell videreutvikling av systemet slik at man kunne fargekodet de forskjellige områdene slik at hver område er lett identifiserbart grunnet disse fargekodene. 
-Samme prinsipper gjelder også for de undermenyer som åpnes dersom man klikker på noen av de komponentene. Man blir presentert med en liste av muligheter gruppert etter tilhørighet til sin funksjon. 
+Et godt eksempel på dette er plasering av alle knapper på fremsiden. Disse har vi valgt å legge horisantalt med samme avstand fra hverandre. Slik plassering danner tilhørighet, man veit at disse henger sammen (\textit{proximity, element connectedness, similarity}). I tilleg forsterkes dette gjennom at vi bruker samme farger på alle de komponentene.\cite{forelesning:tulpesh}
+Samme prinsipper gjelder også for de undermenyer som åpnes dersom man klikker på noen av de konmponentene. Man blir presentert med en liste av muligheter gruppert etter tilhørighet til sin funksjon. 
 
-Toppmenyen er symmetrisk distribuert for å danne en følelse balanse og sentral plassering i layouten. Vi har plassert EasyDev logo i midten og på begge sider av den, komponenter som er kalender og klokke til venstre samt brukerikonet og hurtigvalg til innstillinger til høyre for logoen. 
+Toppanelen er symetrik distribuert for å danne en følelse balanse og sentral perspektig i layouten. Vi har plasert EasyDev logo i midten og på begge sider av den to komponenter som er kalender og klokke til venstre samt brukerikone og hurtivalg til instilligenr til høyre om logoen. Dette danne en tydelig fordelig og utnyttelse av overflate som ikke kan grupperes sammen etter funksjonstilhørighet med hovedkomponentene på siden.
+
+Nederste rad har vi i prototypen valgt å bruke til elementer som har med status av systemet å gjøre. For tilfeldet er det tenkt at man direkte etter pålogging kan får en oversikt over cpu og ram bruk, samt tilgjengelig lagringsutrymme og kjørende prosesser. Dette er noe som kan være ønskeverdt å se for noen av brukerne med det er foreløpig usikkert dersom slike funksjoner skal være aktivert for standardbrukere. Det finnes også forslag at utrymmet kan reserveres til andre foremål som brukeren kan selv velge hvilke typer av <<widgets>> som kan benyttes. Dette er tillegsfunksjonalitet som kan bli i stor grad forendret fra utviklig av prototype til alfa versjon.
 
 \subsection{Bruk av farger}
-Vi har konsekvent valgt å avgrense oss til grunnpaletten i \textit{FlauUI} grensesnittet. Alle farger som vi kan bruke i løsningen presenteres i form av en matrise i figur \ref{fig:farger}. Dette er $4\times 5$ matrise som kanskje bare har tilgang til tjue farger men gir oss ganske store muligheter. 
+Vi har konsekvent valgt å avgrense oss til grunpaletten i \textit{FlauUI} grensesnittet. Alle farger som vi kan bruke i løsningen presenters i form av en matrise i figur \ref{fig:farger}. Dette er $4\times 5$ matrise som kanskje bare har tilgang til tjue farger men gir oss ganske store muligheter. 
 \begin{figure}[h]
 \begin{tabularx}{\textwidth}{*6{>{\centering\arraybackslash}X}@{}}
 
@@ -232,13 +234,13 @@ Vi har konsekvent valgt å avgrense oss til grunnpaletten i \textit{FlauUI} gren
 \caption[Fargekombinasjoner]{Fargekombinasjoner som brukes i hi-fi prototypen}
 \label{fig:farger}
 \end{figure}
-Dersom vi ser på de to øverste og de to nederste radene ser vi at disse bare er forskjellige nyanser av samme farge. Disse har vi valgt å bruke som utheving eller for å danne lav kontrast mellom feks. tabellrader. 
+Dersom vi ser på to øverste og to nederste rader ser vi at disse er bare forskejllige nyanser av samme farge. Disse har vi valgt å bruke som utheving eller for å danne lav kontrast mellom feks. tabellrader. 
 Dersom vi trenger mer kontrast for å varsle brukeren om noe kan vi ta i bruk to \textbf{analoge} farger. Disse er plassert over hverandre i rader 1-3 eller 2-4, f.eks. \emph{Turqoise} og \emph{Sun Flower} eller \emph{Belize Hole} og \emph{Pomegranade}.
-Disse gir myke overganger og kan oftest benyttes sammen og gi en myk og fin overgang f.eks. mellom bakgrunnen i et grensesnitt og et element som f.eks. en knapp.
+Disse gir myke overganger og kan oftest benyttes sammen og gi en myk og følsom overgang f.eks. mellom bakgrunnen i et grensesnitt og et element som kan eksempelvis være en knapp.
 Til sist er det også mulig å benytte seg av to \textbf{komplementærfarger}.
-Disse har vi plassert på skrå fra hverandre som \emph{Peter River} og \emph{Orange} eller \emph{Amethyst} og \emph{Sun Flower}. Disse fargene kombinert brukes til å tydelig markere overgangen mellom et objekt og et annet.
+Disse har vi plassert på skrå fra hverandre som \emph{Peter River} og \emph{Orange} eller \emph{Amethyst} og \emph{Sun Flower}. Disse fargen hvis kombinert tar hverandre helt ut og på slik måte dersom vi bruker dem hve siden av hverandre kan det brukes en tydelig markering. 
 
-Generelt har vi selvsagt ikke benyttet oss av alle disse farger i hi-fi prototypen da mange av dem blir reservert til spesielle tilfeller. Kun mer monotone av farger i figur \ref{fig:farger} blir brukt til komponenter og bakgrunner som ofte forekommer i komponentene.
+Generelt har vi selvsagt ikke benyttett oss av alle disse farger i hi-fi prototypen da mange av dem blir reservert til spesielle tilfellen. Kun mer monotone av farger i figur \ref{fig:farger} blir brukt til komponenter og bakrunner som ofte forekommer i komponentene.
 
 \subsection{Open Source}
-Vi har valgt å basere vår løsning kun på produkter som er tilgjengelige via open source eller som fri kode. Dette er ganske viktig da prosjektet som kunne videreutvikles og ikke skal være avhengig av proprietær teknologi. Videre skal vår kildekode gjøres tilgjengelig slik at det kan gjøres endringer og forbedringer på eksisterende moduler eller lages nye (se avsnitt \ref{sec:hjelpogverkt} for linker). 
+Vi har valgt å basere vår løsning kun på produkter som er tilgjengelige via open source eller som fri kode. Dette er ganske kritisk da prosjektet som kunne videreutvikles og ikke skal være avhengig av propriær teknologi. I sin tur skal vår kildekode gjøres tilgjengelig slik at det kan gjøres endringer og forbedringer på eksisterende moduler eller lages nye (se avsnitt \ref{sec:hjelpogverkt} for linker). 
