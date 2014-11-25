@@ -18,22 +18,25 @@ Usability (brukbarhet): konsistens, brukerkontroll, passende presentasjon.
 Etter at idéen om hva vi skulle jobbe med var klar tok det ikke lang tid før vi ble enige om hvordan vi skal sette sammen vårt forslag til en helhet. Hele gruppen var tydelig på at vi i stor grad ønsket å benytte oss av en løsning som følger Gestalt-prinsipper for god design og layout.
 Systemet skulle kunne administreres via nettleser som gjør det mulig å bruke systemet fra hvilken som helst maskin og med eventuelle tilpasninger kan også gjøres slik at man også kan jobbe fra nettbrett eller telefon.
 På det tidspunktet handlet diskusjonen om hvordan vi skulle fordele de forskjellige modulene og funksjonalitetene på så få hovedområder som mulig, der hvert av de områdene blir et element i hovedmenyen. 
-I det første utkastet bestod disse av:
+I det første utkastet bestod disse av totalt fem forskjelilge seksjoner som presenteres i tabell \ref{tab:sidekart}.
 %\begin{center}
 %\texttt{Editorer | Meldinger | Resurser | System | Servere}
 %\end{center}
 \begin{table}[h]
-\newcommand{\paddA}{1ex}
+\caption[Sidekart]{En sidekart over det første utkastet. Tabellhode representerer hver enkel menykategori. I rad to presenteres forslag til hver menykategori.}
+\label{tab:sidekart}
+\newcommand{\paddA}{0.5ex}
 \newcommand{\paddB}{0.2ex}
+\renewcommand{\familydefault}{\ttdefault}\normalfont
 \begin{tabularx}{\textwidth}{|*5{>{\centering\arraybackslash}X|}@{}|}
 \hline
 \vspace*{\paddA} Editorer & \vspace*{\paddA} Meldinger & \vspace*{\paddA} Resurser & \vspace*{\paddA} System & \vspace*{\paddA} Servere \\[2ex] 
 \hline
 \vspace*{\paddB} Java		&	\vspace*{\paddB} HTML Val			& 	\vspace*{\paddB} Meldinger 	& 	\vspace*{\paddB} Apache 	& \vspace*{\paddB} Brannmur \\
-PHP		& 	CSS Validering 	& 				& 	MySQL 	& Brukergrupper \\
+HTML\& PHP		& 	CSS Val		 	& 				& 	MySQL 	& Brukerg \\
 MySQL	& 	W3Schools 		& 				& 	SSH 		& Logg \\
-C 		& 	DropBox 			& 				& 			& Filbehnadling \\
- 		& 	Terminal \vspace*{\paddB} 		& 				& 			& Systeminfo \vspace*{\paddB} \\
+C/C++/C\# 		& 	DropBox 			& 				& 			& Filbehnadling \\
+ 		& 	Terminal 		& 				& 			& Systeminfo \vspace*{0.2ex} \\
 
 \hline
 \end{tabularx} 
@@ -59,7 +62,7 @@ Prototypen inkluderer eksempel på konfigurasjon av to forskjellige funksjoner.
 Det er vanlig at i en prototype fokuserer man på en horisontal eller vertikal implementasjon. Der man i den horisontale versjonen implementerer få eller ingen funksjoner som går i dybden med istedet forsøker man å vise bredden av muligheter i et system eller grensesnitt. I den vertikale implementasjonen velger man insteden å begrense bredden på hva prototypen kan vise eller gjøre med insteden implementerer man en eller flere funksjoner på dybdeben.\cite{book:utforming}
 På dette studium har vi valgt å avgrense disse til konfigurasjon av Apache webserver og oppsett av brukere og grupper. 
 
-\begin{figure}
+\begin{figure}[ht]
 %bruk \begin{figure}[ht] dersom figuren ikke skal flyte
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./img/prosessdokumentasjon/lowfi/fremside.png}
 \caption[Low-fi prototype]{Fremside for EasyDev i første low-fi prototype.}
@@ -136,7 +139,7 @@ Siste eksempel (figur \ref{fig:apache5}) viser mulighet for konfigurasjon av noe
         \caption[Konfigurasjon av Apache webserver]{Eksempel på konfigurasjon av Apache webserver.}\label{fig:lowfiapache}
 \end{figure}
 
-
+\pagebreak
 \subsection{Oppsett av brukere og grupper}
 I følgende modul har vi mulighet til å sette både brukergrupper, brukere og rettigheter en enstake bruekre eller hele grupper av brukere. Modulen er tenkt å brukes da man tenker å benytte systemet for gruppearbeid slik at flere bruekere kan dele på samme resurser. De eksempler som beskrives her kan betraktes i figur \ref{fig:lowfibrukere}. 
 % med flagg p setter vi hele denne figuren på en egen side
