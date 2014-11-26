@@ -1,17 +1,20 @@
 \chapter{Brukertesting}
-\lettrine[lines=2]{F}{}or å kartlegge å bilde oss en oppfattning om vår tankemåte for produktet og prototypen har vi valgt å gjennomføre breukertester basert på hi-fi prototypen. Hensikten med testen er å tydeliggjøre eventuelle fallgroper som vi som utviklere ikke har tenkt på. Vi tenkter fra vårt perspektiv men det er ikke nødvendig at brukere som ikke har noe med utviklng av systemet har samme persepsjon av de funksjoner funksjoner og tankemåter. 
-Hensikten med testen er i grunn og bunn å forbedre produktet sin kvalitet mot sluttbrukeren gjennom å finne hvilke deler det grafiske grensesnitte som må forbedres. 
+\lettrine[lines=2]{M}{}ed hensikt å kartlegge samt danne oppfattning om vår tankemåte for produktet og prototypen har vi valgt å gjennomføre brukertester basert på hi-fi prototypen. Hensikten med testen er å tydeliggjøre eventuelle fallgroper som vi som utviklere ikke har tenkt på. 
+Vi utvikler fra vårt perspektiv men det er ikke nødvendig at brukere som ikke har noe med utviklng av systemet har samme persepsjon av de funksjoner og tankemåter. 
+Hensikten med testen er i grunn og bunn å forbedre produktet sin kvalitet mot sluttbrukeren gjennom å finne hvilke deler det grafiske grensesnitte som trenger forbedring. 
 
 \section{Gjennomførelse}
-Det som er viktig å vise for brukeren er at det ikke er brukeren som testes men produktet. Dette skal gjøres klar tfor alle testpersoner i testen. Antall testperson skal produktet skal testes på er $5 \pm 2$ testpersoner. Grunnen til dette er at oftest blir frekvensebildet samme uansett hvis man tester åtte, tredve elelr hundre brukere.\cite{lazar2010research}\cite{book:utforming}
+Det er viktig å vise for brukeren at det ikke er brukeren som testes men produktet. 
+Dette er noen som må gjøres klart og tydelig for alle testpersoner i testen. Antall testperson skal produktet skal testes på er $5 \pm 2$ testpersoner. Grunnen til dette er at oftest blir frekvensebildet for resultatet samme uansett hvis man tester åtte, tredve eller hundre brukere.\cite{lazar2010research}\cite{book:utforming}
 
-Testet skal gjennomføres gjennom å brukeren får gjennomføre oppgaver basert på de moduler og deler som er implementert i hi-fi prototypen. Dette er noe som blir ganske begrenset foreløpig ettersom det er foreløpig får funksjoner som er implementert i prototypen. Resultatet av brukertesten kan være en god henvisning på dersom  vi eventuelt trenger å tenke om gjeldende noen av de grafiske delene i systemet. 
+Testet skal gjennomføres gjennom at brukeren får gjennomføre oppgaver basert på de moduler og deler som er alerede implementert i hi-fi prototypen. Dette er noe som blir ganske begrenset foreløpig ettersom det er foreløpig få funksjoner som er implementert i prototypen. 
+Resultatet av brukertesten vil gi en god henvisning på dersom  vi eventuelt trenger å tenke om gjeldende noen av de grafiske delene i systemet. 
 De oppgaver som brukeren kommer å få blir da:
 \begin{description}
 \item[Design og navigasjon]
 Generell navigasjon i systemet. Her skal det observeres hvordan det er for brukeren å finne frem til de moduler som må aktiveres for å gjennomføre to neste oppgaver i systemet.
 \item[Brukeradminsitrasjon]
-Testpersonen blir bedt om å gjennomføre enkel brukeradministrasjon. Brukeren kommer til å fpr spørmål om dersom de skjønner hva som er hensikten og kan gjøres i hvert enkelt skejrmbilde.
+Testpersonen blir bedt om å gjennomføre enkel brukeradministrasjon. Brukeren kommer til å få spørmål om dersom de skjønner hva som er hensikten og kan gjøres i hvert enkelt skejrmbilde.
 \item[Konfigurasjon av webserver]
 I stort sett samme som tidligere oppgave. Brukeren skal teste modulen for konfigurasjon av Apache webserver. Det er fordelaktig at vi tester på brukere som ikke har en tidligere erfaring med slik konfigurasjon. Det bli undersøkt dersom brukeren forstår hvert skjermbilde og kan forklare hva som er hensikten med alle trinn.
 \end{description}
@@ -26,10 +29,10 @@ Testpersonen kommer rett og slett å motta tre oppgaver absert på punktene over
 \item Din siste oppgave blir å konfigurere Apache webserver. Du skal legge til en mappe som skal være tilgjengelig for serveren. Etterpå skal du aktivere <<directory browsing>> for de mapper du har valgt og aktivere PHP modul på serveren.
 \end{enumerate}
 
-Testene gjennomføres etter prinsippen <<\textit{think out loud}>> som medfører i enkle trekk at testepersonen forteller høgt hva de tenker gjøre i hver situasjon da de gjennomfører sine oppgaver. Detter er nødvendig ettersom det er ikke implementert noen praktisk funksjonalitet i modellen. Tespersonen blir derfor presentert med kun en representasjon av det virkelige grensesnittet. Alle trinn som brukeren gjennomfører blir notert. Under forsøkene får testpersonen ingen hjelp for hvor man skal gjennomføre oppgavene.
+Testene gjennomføres etter prinsippen <<\textit{think out loud}>> som medfører i enkle trekk at testepersonen forteller høgt hva de tenker gjøre i hver situasjon når de gjennomfører sine oppgaver. Slik tilnærming er nødvendig ettersom det er ikke implementert noen praktisk funksjonalitet i modellen. Tespersonen blir derfor presentert med kun en representasjon av det fremtidige grensesnittet. Alle trinn som brukeren gjennomfører blir notert. Under forsøkene får testpersonen ingen hjelp for hvor man skal gjennomføre oppgavene.
 
 \section{Spørsmål}
-Testpersonen blir presenter med et flertall spørsmål under hver enkel kategori. Disse kommer til å grupperes etter forskjellige overordnede typer. Følgende er en liste på de spørsmålene som vi har valg for brukertesting.
+Testpersonen blir presentert med et flertall spørsmål under hver enkel kategori. Disse kommer til å grupperes etter forskjellige overordnede typer. Følgende er en liste på de spørsmålene som vi har valg for brukertesting.
 
 \begin{enumerate}
 \setlength{\itemsep}{1pt}
@@ -37,8 +40,8 @@ Testpersonen blir presenter med et flertall spørsmål under hver enkel kategori
 \setlength{\parsep}{0pt}
 \item Navigasjon
 \begin{enumerate}
-\item Hvordan fant du ut hvordan du skulle navigere deg i systemet?
-\item Fant fu hva du søkte 
+\item Følte du at det var intuitivt å navigere seg i systemet?
+\item Var det vanskelig å finne det som var etterspurt i oppgaven?
 \end{enumerate}
 \item Design og Layout
 \begin{enumerate}
@@ -69,29 +72,31 @@ Testpersonen blir presenter med et flertall spørsmål under hver enkel kategori
 \end{enumerate}
 
 \section{Testresultat}
-Testene ble gjennomført på hi-fi prototype plasert på en publik webserver under adresse:\\ \url{http://student.cs.hioa.no/~s198569/EasyDev/login.php} 
-Det er ikke nødvendig med brukernavn eller passord for pålogging.
+Testene ble gjennomført på hi-fi prototype plasert på en publik webserver under adresse:\\ \url{http://student.cs.hioa.no/~s198569/EasyDev/login.php}\\
+\textit{Det er ikke nødvendig med brukernavn eller passord for pålogging}.
 
 Det ble totalt testet 7 personer. Testene ble gjennomfør i kaféen ved Pilestredet 35 på ettermiddagen. Den testede gruppen bestod av kun studenter fra linjer som data, bygg og økonomi.
 
 \subsection{Hva er bra?}
-Alle brukere gjorde seg rask kjent med hvordan det var å bruke systemet. Alle testpersoner mente at det var ganske enkelt å navigere seg på startsiden uten å behøve <<tenke>>. Det mentes at layouten føltes intuitivt på en måte der de fleste kjenner seg igjen fra bruk av andre systemer. Det var ingen som hadde problem med å finne til den modul som de tregte å komme åt for å gjennomføre gitt oppgave.
+Alle brukere gjorde seg rask kjent med hvordan det var å bruke systemet. Samtlige testpersoner mente at det var ganske enkelt å navigere seg på startsiden uten å behøve <<tenke>>. Det mentes at layouten føltes intuitivt på en måte der de fleste kjenner seg igjen fra bruk av andre systemer (f.eks. nettbrett). 
+Ingen testperson hadde problem med å finne nødvendig modul i grensesnittet for å gjennomføre gitt oppgave.
 Det var flere tilbakemeldinger gjeldende god og brukervennlig layout.
 
-Alle testperson klarte også å sette opp alle funksjoner som ettersportes for webserveroppsett. Dette tross at det er ikke alle som var kjent med de spesifikke underliggende modulene. Man var ombett å aktivere en viss modul hvilket kunde gjøres gjennom å kun kjenne til navnet til modulen.
+Alle testpersoner klarte også å sette opp alle funksjoner som ettersportes for webserveroppsett. Dette tross at det er ikke alle som var kjent med de spesifikke underliggende modulene. Man var ombett å aktivere en viss modul hvilket kunde gjøres gjennom å kun kjenne til navnet til modulen.
 
 Det var kun positive tilbakemeldinger i forhold til bruk av farger. Nesten alle testpersoner mente at de brukte fargene gir et behagligt inntryk om samspiller på en positiv måte som bidrar til forhøyd brukeropplevelse.
 
 \subsection{Hva bør forbedres?}
-Noen brukere mente at layouten borde gjøres med visuelt tiltalende etters foreløpig gav den et inntrykk over et uferdig produkt.
-Det var noen mindre problemer med å konfigurere grupper da det var noen av testpersonen som ikke skjønte helt hensikten med brukeregrupper i systemet. Samme gjelde da det skulle tildeles resurser til en gruppe. Dette kan eventuelt skylle at vi har plasert flere valg som kan gjøres direkte fra modulen for gruppeadministrasjon (se fingur \ref{fig:brukerehi2} side \pageref{fig:brukerehi2}).
+Noen brukere mente at layouten borde gjøres mer visuelt tiltalende ettersom foreløpig gav den inntrykk over et uferdig produkt.
+Det var noen mindre problemer med å konfigurere grupper, det var enkelte testpersoner som ikke skjønte helt hensikten med brukeregrupper i systemet. 
+Samme gjelder da det skulle tildeles resurser til en gruppe. Det kan eventuelt skylles at vi har plasert flere valg som kan gjøres direkte fra modulen for gruppeadministrasjon (se fingur \ref{fig:brukerehi2} side \pageref{fig:brukerehi2}).
 
-Flertall brukere hadde også utfordring med å skjønne hvordan man bruker neste trinn i gruppedaministrasjon hvilket (bilde \ref{fig:brukerehi3} side \pageref{fig:brukerehi3}). For noen var det uklart dersom hensikten var å kun legge til brukere eller hvis man kunde også legge til grupper i dette bilde. Årsaken til dette er at bildet har en forhåndsdefiniert liste som består av både brukernavn og programmoduler hvilket gav litt uklar inntrykk relatert til bruksområde.
+Flertall brukere hadde også utfordring med å skjønne hvordan man bruker neste trinn i gruppedaministrasjon (bilde \ref{fig:brukerehi3} side \pageref{fig:brukerehi3}). For noen var det uklart dersom hensikten var å kun legge til brukere eller hvis man kunde også legge til grupper i samme skjermbilde. Årsaken til dette er at bildet har en forhåndsdefiniert liste som består av både brukernavn og programmoduler hvilket gav noe så uklart inntrykk relatert til bruksområde.
 
-I bilde \ref{fig:brukerehi4} (side \pageref{fig:brukerehi4}) var det noen uklarheter gjeldende til vhilken gruppe som man egentlig legger til modulene. Dette framgår i nvnet for vinuduet men noen av testpersonen mente at det borde gjøres mer tydelig. 
+I bilde \ref{fig:brukerehi4} (side \pageref{fig:brukerehi4}) var det noen uklarheter gjeldende til hvilken gruppe som man egentlig legger til modulene. Dette framgår i titteln for vinuduet men noen av testpersonen mente at det borde gjøres mer tydelig. 
 
-Generelt i administrasjon av grupper var det noe forvirrende med at vi hadde lagt til to <<tilbake>> knapper på begge sider av dialogvindu. Dette viste seg være noe så uklart gjeldende hvilken hensikt disse har. Fra et brukerperspektiv ser det ut som at begge knapper leder til samme trinn. Dette er så klart feil ettersom venstre kanppen leder <<tilbake>> og høyre <<frem>> leder til neste trinn i dialogen.
+Generelt i administrasjon av grupper var det noe forvirrende med at vi hadde lagt til to <<\textit{tilbake}>> knapper på begge sider av dialogvindu. Det viste seg være noe så uklart gjeldende hvilken hensikt disse to knapper har. Fra et brukerperspektiv ser det ut som at begge knapper leder til en og samme trinn i dialogen. Dette er så klart feil ettersom venstre kanppen leder <<\textit{tilbake}>> og høyre <<\textit{frem}>> leder til neste trinn i dialogen.
 
-Gjelden alle dialogvinduer er det tenkt at det skal ikke være mulig å gjøre spesifike feil eller avslutte dialogen i førtid. Foreløpig er dialogene satt opp slik at dersom brukere klikker utenfor dialogvinduet kommer det forårsake at det lukkes. Dette var noe som flere av brukerne gjorde hvilket opfattedes som ganske frusterede ettersom man fikk egentlig begynne om hele prosesesen i modulen.
+Gjeldende alle dialogvinduer er det tenkt at det skal ikke være mulig å gjøre spesifike feil eller avslutte dialogen i førtid. Foreløpig er dialogene satt opp slik at dersom brukere klikker utenfor dialogvinduet kommer det til å forårsake at det vinduet lukkes. Dette var noe som intreffede flere ganger under brukeretestingen. Noen som opplevede frustrerende av brukerne ettersom hvis man jobbet med f.eks. vindu nr 3 av 4 i dialogprosessen måtte man begynne hele prosessen på nytt.
 
-Noen av tilbakemeldingene var riktet mot at når dialogboksen vises bør den være mer dominerende over de komponenter som ligger i bakgrunn. De bakomliggende komponentene borde tones ned slik disse ikke er lengre <<forstyrrende>> for den oppgave som man skal gjennomføre. Det er derfor tenkt at det skal implementeres et underliggende lag som er halvgjennomsikelig som ligger bak dialogboksen men over andre komponenter som meny eller andre knapper.
+Noen av tilbakemeldingene var riktet mot at når dialogboksen vises, bør den være mer dominerende over de komponenter som ligger i bakgrunnen. De bakomliggende komponentene borde tones ned, slik at disse ikke lengre er <<forstyrrende>> for den oppgave som man skal gjennomføre. Det er derfor tenkt at det skal implementeres et underliggende lag som er halvgjennomsikelig som ligger bak dialogboksen men over andre komponenter som meny eller andre knapper.
